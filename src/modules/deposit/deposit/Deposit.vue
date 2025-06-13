@@ -9,7 +9,7 @@
             <div class="rounded-md shadow-md bg-white py-3 flex flex-wrap justify-center items-center gap-3">
                 <div v-for="(payment, index) in bankTypes" :key="index"
                     :class="selectedBankType === payment.id ? 'border-[3px] border-gold' : ''"
-                    class="flex flex-col justify-center items-center p-2 bg-gray rounded-md cursor-pointer"
+                    class="flex flex-col justify-center items-center p-2 !bg-primary rounded-md cursor-pointer"
                     @click="handleSelectBankType(payment)">
                     <img :src="payment.image" :alt="payment.name" class="w-20 h-20 rounded-md" />
                     <span class="text-sm font-medium text-light">{{ payment.name }}</span>

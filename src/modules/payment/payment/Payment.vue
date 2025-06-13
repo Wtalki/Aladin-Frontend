@@ -25,25 +25,25 @@
             </Button>
         </div>
         <div
-            class="p-4 !bg-primary rounded-md font-semibold shadow-md text-white border border-3 border-success flex flex-col space-y-3">
+            class="p-4 !bg-primary rounded-md font-semibold shadow-md text-white border border-3 !border-gold flex flex-col space-y-3">
             <h1>{{ $t('topup_instructions.title') }}</h1>
             <span>{{ $t('topup_instructions.step_1') }}</span>
             <span>{{ $t('topup_instructions.step_2') }}</span>
             <span>{{ $t('topup_instructions.step_3') }}</span>
         </div>
         <a href="https://youtube.com/shorts/cen5Z2YrPP4?si=tSaCTMgKLiFzB7gg" target="blank"
-            class="p-2 !bg-primary cursor-pointer rounded-md font-semibold shadow-md text-white border border-3 border-success flex items-center space-x-3">
+            class="p-2 !bg-primary cursor-pointer rounded-md font-semibold shadow-md text-white border border-3 !border-gold flex items-center space-x-3">
             <img src="@/assets/images/webp/youtube.webp" width="30" alt="Telegram" />
             <span>{{ $t('topup_instructions.how_to_topup') }}</span>
         </a>
         <div
-            class="p-4 !bg-primary rounded-md font-semibold shadow-md text-white border border-3 border-success flex flex-col space-y-3">
+            class="p-4 !bg-primary rounded-md font-semibold shadow-md text-white border border-3 !border-gold flex flex-col space-y-3">
             <h1>{{ $t('withdraw_instructions.title') }}</h1>
             <span>{{ $t('withdraw_instructions.step_1') }}</span>
             <span>{{ $t('withdraw_instructions.step_2') }}</span>
         </div>
         <a href="https://youtube.com/shorts/I7nLF4m-5_M?si=AB69joJtDlz52-a2" target="blank"
-            class="p-2 !bg-primary cursor-pointer rounded-md font-semibold shadow-md text-white border border-3 border-success flex items-center space-x-3">
+            class="p-2 !bg-primary cursor-pointer rounded-md font-semibold shadow-md text-white border border-3 !border-gold flex items-center space-x-3">
             <img src="@/assets/images/webp/youtube.webp" width="30" alt="Telegram" />
             <span>{{ $t('withdraw_instructions.how_to_withdraw') }}</span>
         </a>
