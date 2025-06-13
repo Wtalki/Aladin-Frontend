@@ -12,7 +12,7 @@
                 <p class="text-lg text-center text-warning">{{ $t('service_description') }}</p>
 
                 <div v-for="(contact, index) in contacts" :key="index"
-                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 !bg-primary !border-success shadow-md">
+                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 !bg-primary !border-gold shadow-md">
                     <a v-if="contact.phone" :href="'tel:' + contact.phone"
                         class="text-xl font-bold underline tracking-wider">{{ contact.phone }}</a>
                     <div class="flex items-center gap-2">
