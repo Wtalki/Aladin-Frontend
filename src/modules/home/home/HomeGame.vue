@@ -1,10 +1,30 @@
 <template>
-  <div class="p-4">
-    <div v-for="game in gameLists" :key="game.id" class="mb-2 p-2 border">
-      {{ game.game_name }}
-      <img :src="game.image" alt="">
+  <div class="p-4 space-y-4">
+    <div class="flex flex-row gap-2">
+      <input v-model="searchQuery" type="text" placeholder="Search games..." class="w-full p-2 border rounded" />
+      <select v-model="selectedPlatform" class="w-full p-2 border rounded">
+        <option value="" selected>All Platforms</option>
+        <option v-for="platform in platforms" :key="platform" :value="platform">
+          {{ platform }}
+        </option>
+      </select>
     </div>
-    <div v-if="loading" class="text-center text-sm text-gray-500">Loading...</div>
+
+    <div class="grid grid-cols-3 gap-3 pb-20">
+      <div v-for="game in gameLists" :key="game.id"
+        class="rounded-md shadow-md overflow-hidden cursor-pointer transition-transform hover:scale-105">
+        <img :src="game.image" :alt="game.game_name" class="w-full h-32 object-cover" />
+        <div class="p-2 text-center">
+          <h2 class="text-sm font-semibold text-light truncate">
+            {{ game.game_name }}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="loading" class="h-screen text-center text-light">
+      Loading...
+    </div>
   </div>
 </template>
 
@@ -17,6 +37,8 @@ export default {
       page: 1,
       loading: false,
       hasMore: true,
+      selectedPlatform: '',
+      platforms: ['PG', 'JILI', 'CQ9', 'JDB', 'Spadegaming'],
     }
   },
   methods: {
@@ -62,6 +84,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-</style>

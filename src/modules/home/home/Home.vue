@@ -8,16 +8,7 @@
     <section class="space-y-3 p-3 mt-14 min-h-screen overflow-y-auto" :class="token ? 'mt-14' : 'mt-0'">
         <HomeCarousal />
         <Announcement />
-        <HomeCategory/>
-        <div class="flex items-center gap-3">
-            <router-link to="/twod" class="!bg-primary rounded-lg p-3 flex justify-center items-center cursor-pointer">
-                <img :src="require('@/assets/images/svg/2D.svg')" class="!w-16 relative" />
-            </router-link>
-            <router-link to="/threed"
-                class="!bg-primary rounded-lg p-3 flex justify-center items-center cursor-pointer">
-                <img :src="require('@/assets/images/svg/3D.svg')" class="!w-16 relative" />
-            </router-link>
-        </div>
+        <HomeCategory />
     </section>
 </template>
 
