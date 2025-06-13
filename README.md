@@ -1,4 +1,4 @@
-# 88LOTTO
+# ALADIN
 
 ### ENV setup
 ```sh

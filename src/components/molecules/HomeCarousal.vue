@@ -4,13 +4,8 @@
         disableOnInteraction: true
     }" :pagination="{ clickable: true }">
         <swiper-slide>
-            <img src="/banners/b1.jpg" class="shadow-md cursor-pointer rounded-lg object-cover w-full h-[200px]" />
-        </swiper-slide>
-        <swiper-slide>
-            <img src="/banners/b2.jpg" class="shadow-md cursor-pointer rounded-lg object-cover w-full h-[200px]" />
-        </swiper-slide>
-        <swiper-slide>
-            <img src="/banners/b3.jpg" class="shadow-md cursor-pointer rounded-lg object-cover w-full h-[200px]" />
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/ad858352683347.591968d3be907.jpg"
+                class="shadow-md cursor-pointer rounded-lg object-cover w-full h-[200px]" />
         </swiper-slide>
     </swiper>
 </template>

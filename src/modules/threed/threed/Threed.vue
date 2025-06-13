@@ -3,7 +3,7 @@
         <div class="bg-gold text-light p-2 mb-2 rounded-lg w-full flex justify-center items-center">
             3D ထွက်မည့်ရက် : {{ threedSetting?.result_date }}
         </div>
-        <div class="bg-success text-light p-3 rounded-lg w-full text-center flex justify-between items-center">
+        <div class="bg-gold text-light p-3 rounded-lg w-full text-center flex justify-between items-center">
             <span>
                 {{ $t('rul') }}
                 <router-link to="/threed/threed-rules" class="underline">{{ $t('read') }}</router-link>
@@ -26,16 +26,16 @@
         </section>
 
         <section class="w-full flex flex-col items-center mt-6">
-            <span class="text-5xl font-bold text-success animate-pulse">{{ live?.result }}</span>
+            <span class="text-5xl font-bold text-gold animate-pulse">{{ live?.result }}</span>
             <div class="text-gray-400 mt-3 text-md flex items-center space-x-2">
-                <i class="fas fa-check text-success"></i>
-                <span class="text-success font-semibold">Updated</span>
+                <i class="fas fa-check text-gold"></i>
+                <span class="text-gold font-semibold">Updated</span>
                 <span>{{ live?.date }}</span>
             </div>
         </section>
 
         <section class="w-full mt-6 space-y-5 !pb-32">
-            <div v-for="result in results" :key="result.id" class="bg-primary text-light p-4 rounded-lg">
+            <div v-for="result in results" :key="result.id" class="!bg-primary text-light p-4 rounded-lg">
                 <div class="flex justify-between items-center mt-3">
                     <div class="flex flex-col items-center">
                         <h1 class="text-lg font-semibold">{{ $t('date') }}</h1>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <h1 class="text-lg font-semibold">{{ $t('3d_result') }}</h1>
-                        <p class="text-success font-bold text-xl">{{ result.result }}</p>
+                        <p class="text-gold font-bold text-xl">{{ result.result }}</p>
                     </div>
                 </div>
             </div>

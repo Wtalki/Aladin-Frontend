@@ -4,7 +4,7 @@
         <Loading :loading="loading" v-if="loading" />
         <div v-else class="w-full pb-20">
             <div v-for="(winner, index) in winners" :key="index">
-                <div v-if="winner.phone" class="bg-primary rounded-lg p-3 mb-4 shadow-md">
+                <div v-if="winner.phone" class="!bg-primary rounded-lg p-3 mb-4 shadow-md">
                     <div class="my-2">
                         <div class="flex items-center mt-2">
                             <img v-if="winner.avatar" :src="winner.avatar"
@@ -28,7 +28,7 @@
                         </div>
                         <div class="my-2 text-warning">
                             {{ $t('win_type') }}:
-                            <span class="p-1 rounded bg-success text-light text-sm" v-if="detail.win">ဒဲ့ပေါက်သည်</span>
+                            <span class="p-1 rounded bg-gold text-light text-sm" v-if="detail.win">ဒဲ့ပေါက်သည်</span>
                             <span class="p-1 rounded bg-gold text-light text-sm"
                                 v-if="detail.round_win">သွပ်ပေါက်သည်</span>
                         </div>

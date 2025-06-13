@@ -1,7 +1,7 @@
 <template>
     <section class="mb-4">
         <div
-            class="flex justify-center items-center gap-2 border-r rounded-tr-lg rounded-tl-lg border-l border-gold bg-primary py-2">
+            class="flex justify-center items-center gap-2 border-r rounded-tr-lg rounded-tl-lg border-l border-gold !bg-primary py-2">
             <img class="!w-10" :src="require('@/assets/images/svg/winner.svg')" />
             <h1 class="mb-2 text-xl font-semibold text-center text-gold">{{ $t('winners') }}</h1>
         </div>
@@ -24,11 +24,11 @@
                     <div class="w-16 h-8 bg-gray-700 rounded"></div>
                 </div>
 
-                <div v-else class="w-full p-2 rounded shadow-md bg-primary">
+                <div v-else class="w-full p-2 rounded shadow-md !bg-primary">
                     <div class="flex items-center justify-between">
                         <div>
                             <div class="flex items-center justify-center gap-2">
-                                <img :src="winner.image" class="rounded-full" style="width: 2.5rem; height: 2.5rem"/>
+                                <img :src="winner.image" class="rounded-full" style="width: 2.5rem; height: 2.5rem" />
                                 <div>
                                     <span class="text-lg opacity-75">{{ winner.phone }}</span>
                                     <span class="text-xs font-thin line-clamp-1 text-warning"> {{ winner.amount }} {{

@@ -7,8 +7,8 @@
         <div v-if="error" class="text-danger mt-1 text-sm">{{ error }}</div>
         <div class="flex mt-3 gap-2">
             <button @click="clearInput" class="w-1/2 bg-danger text-white py-2 rounded-md  transition">{{ $t('delete')
-                }}</button>
-            <button @click="generateManualDigit" class="w-1/2 bg-success text-white py-2 rounded-md  transition"
+            }}</button>
+            <button @click="generateManualDigit" class="w-1/2 bg-gold text-white py-2 rounded-md  transition"
                 data-bs-dismiss="modal">{{ $t('confirm') }}</button>
         </div>
     </section>

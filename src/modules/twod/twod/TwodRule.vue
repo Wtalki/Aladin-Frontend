@@ -4,7 +4,7 @@
             <h1 class="text-warning text-center text-2xl font-semibold">စည်းကမ်းချက်များ</h1>
 
             <div v-for="(item, index) in accordionItems" :key="index">
-                <div class="border border-gray-700 p-3 mx-2 mt-3 rounded-lg transition-all duration-300 cursor-pointer flex justify-between items-center hover:bg-primary"
+                <div class="border border-gray-700 p-3 mx-2 mt-3 rounded-lg transition-all duration-300 cursor-pointer flex justify-between items-center hover:!bg-primary"
                     @click="toggleAccordion(index)">
                     <span class="text-white text-lg font-medium">{{ item.title }}</span>
                     <img v-if="activeIndex !== index" src="@/assets/images/svg/arrowRight.svg" width="25" alt="" />
@@ -13,7 +13,7 @@
 
                 <transition name="fade">
                     <div v-if="activeIndex === index"
-                        class="border border-gray-700 p-4 mx-2 rounded-lg mt-2 bg-primary">
+                        class="border border-gray-700 p-4 mx-2 rounded-lg mt-2 !bg-primary">
                         <div v-for="(section, secIndex) in item.content" :key="secIndex" class="mb-4">
                             <h6 class="text-gold font-semibold">{{ section.title }}</h6>
                             <ul class="list-disc ml-5 space-y-2 text-white">

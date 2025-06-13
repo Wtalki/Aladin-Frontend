@@ -1,11 +1,11 @@
 <template>
     <div class="w-full min-h-screen pb-4">
-        <div class="flex flex-col items-center !bg-gray-800 py-6">
+        <div class="flex flex-col items-center py-6">
             <img alt="Profile" class="rounded-full object-cover w-28 h-28" :src="user?.profile" width="100" />
             <h2 class="text-xl font-bold mt-2 text-light">{{ user?.name }}</h2>
             <span class="text-md font-semibold mt-2 text-light">{{ user?.phone }}</span>
         </div>
-        <div class="!bg-secondary rounded-t-2xl p-4 mt-[-15px]">
+        <div class="!bg-primary rounded-t-2xl p-4 mt-[-15px]">
             <router-link to="/editProfile"
                 class="flex items-center justify-between mb-4 !hover:bg-gray-500 transaction-all durition-100 p-1 rounded-lg cursor-pointer">
                 <div class="flex items-center">

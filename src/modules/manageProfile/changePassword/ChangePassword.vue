@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-primary min-h-screen flex flex-col items-center justify-between appWidth">
+    <div class="!bg-primary min-h-screen flex flex-col items-center justify-between appWidth">
         <div class="p-4 w-full max-w-md mb-14">
-            <h1 class="text-xl font-bold text-success mb-4 text-center">{{ $t('Change_Password') }}</h1>
+            <h1 class="text-xl font-bold text-gold mb-4 text-center">{{ $t('Change_Password') }}</h1>
             <form @submit.prevent="changePin">
 
                 <div class="mb-3 relative">
@@ -42,8 +42,7 @@
                     </button>
                 </div>
 
-                <button class="w-full py-3 rounded-full bg-success text-white font-bold" type="submit"
-                    :disabled="loading">
+                <button class="w-full py-3 rounded-full bg-gold text-white font-bold" type="submit" :disabled="loading">
                     {{ $t('Change_Password') }}
                 </button>
 

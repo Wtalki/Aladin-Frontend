@@ -5,25 +5,19 @@
             <WalletCard />
         </div>
     </div>
-    <section class="space-y-3 p-3 mt-14" :class="token ? 'mt-14' : 'mt-0'">
+    <section class="space-y-3 p-3 mt-14 min-h-screen overflow-y-auto" :class="token ? 'mt-14' : 'mt-0'">
         <HomeCarousal />
         <Announcement />
-        <router-link to="/twod"
-            class="text-danger !bg-primary rounded-lg p-3 flex justify-between items-center cursor-pointer overflow-hidden relative">
-            <img :src="require('@/assets/images/webp/2d_lottery.png')" class="absolute w-[900px] left-[0px]" alt="" />
-            <div class="absolute w-[900px] h-[200px] bg-[#20202031] left-0 backdrop-blur-sm"></div>
-            <img :src="require('@/assets/images/svg/2D.svg')" class="!w-16 relative" />
-            <h1 class="text-xl font-semibold relative">{{ $t('2D_Lottery') }}</h1>
-        </router-link>
-        <router-link to="/threed"
-            class="text-danger !bg-primary rounded-lg p-3 flex justify-between items-center cursor-pointer overflow-hidden relative">
-            <img :src="require('@/assets/images/webp/2d_lottery.png')" class="absolute w-[900px] left-[0px]" alt="" />
-            <div class="absolute w-[900px] h-[200px] bg-[#8b66215b] left-0 backdrop-blur-sm"></div>
-            <img :src="require('@/assets/images/svg/3D.svg')" class="!w-16 relative" />
-            <h1 class="text-xl font-semibold relative">{{ $t('3D_Lottery') }}</h1>
-        </router-link>
-        <LotteryGift />
-        <Winners />
+
+        <div class="flex items-center gap-3">
+            <router-link to="/twod" class="!bg-primary rounded-lg p-3 flex justify-center items-center cursor-pointer">
+                <img :src="require('@/assets/images/svg/2D.svg')" class="!w-16 relative" />
+            </router-link>
+            <router-link to="/threed"
+                class="!bg-primary rounded-lg p-3 flex justify-center items-center cursor-pointer">
+                <img :src="require('@/assets/images/svg/3D.svg')" class="!w-16 relative" />
+            </router-link>
+        </div>
     </section>
 </template>
 
@@ -33,23 +27,15 @@ import ProfileBar from '@/components/molecules/ProfileBar.vue'
 import WalletCard from '@/components/molecules/WalletCard.vue'
 import HomeCarousal from '@/components/molecules/HomeCarousal.vue'
 import Announcement from '@/components/molecules/Announcement.vue'
-import LotteryGift from '@/components/molecules/LotteryGift.vue'
-import Winners from '@/components/molecules/Winners.vue'
 export default {
     components: {
         ProfileBar,
         WalletCard,
         HomeCarousal,
-        Announcement,
-        LotteryGift,
-        Winners
+        Announcement
     },
     computed: {
         ...mapGetters(["token"]),
     },
 }
 </script>
-
-<style lang="stylus" scoped>
-
-</style>

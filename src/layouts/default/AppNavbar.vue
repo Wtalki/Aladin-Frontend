@@ -1,7 +1,7 @@
 <template>
     <nav class="sticky z-10 h-20 !bg-primary appWidth mx-auto top-0 flex flex-row px-3 justify-between items-center">
         <Button type="link" route="/" class="flex items-center space-x-2">
-            <img :src="require('@/assets/icons/88Lotto.png')" class="w-40" alt="Logo" />
+            <img :src="require('@/assets/icons/logo.png')" class="w-16" alt="Logo" />
         </Button>
 
         <section class="flex items-center space-x-3">

@@ -1,25 +1,22 @@
 <template>
     <div class="p-4 w-full max-w-md mb-14">
         <div class="flex justify-center mb-6">
-            <img alt="Illustration of a hand holding a phone with a shield in the background" class="w-40 h-40" height="150" src="https://storage.googleapis.com/a1aa/image/Jl1O8hEOOHWxH5GJb1Zd3lmzbUj1CTKN65BAjZZ5kLw.jpg" width="150" />
+            <img alt="Illustration of a hand holding a phone with a shield in the background" class="w-40 h-40"
+                height="150"
+                src="https://storage.googleapis.com/a1aa/image/Jl1O8hEOOHWxH5GJb1Zd3lmzbUj1CTKN65BAjZZ5kLw.jpg"
+                width="150" />
         </div>
         <h1 class="text-2xl font-bold text-center mb-2">{{ $t('otp_verification') }}</h1>
         <p class="text-gray-200 text-center mb-6">{{ $t('enter_verification_code') }}</p>
 
         <form @submit.prevent="handleVerify">
             <div class="flex justify-center space-x-2 mb-6">
-                <input
-                    v-for="(digit, index) in otp"
-                    :key="index"
-                    class="w-12 h-12 text-center border rounded-lg text-lg"
-                    maxlength="1"
-                    type="text"
-                    v-model="otp[index]"
-                    @input="handleInput($event, index)"
-                    @keydown.backspace="handleBackspace(index)"
-                />
+                <input v-for="(digit, index) in otp" :key="index"
+                    class="w-12 h-12 text-center border rounded-lg text-lg" maxlength="1" type="text"
+                    v-model="otp[index]" @input="handleInput($event, index)"
+                    @keydown.backspace="handleBackspace(index)" />
             </div>
-            <button class="w-full bg-success text-white py-3 rounded-lg mb-4">{{ $t('verify') }}</button>
+            <button class="w-full bg-gold text-white py-3 rounded-lg mb-4">{{ $t('verify') }}</button>
         </form>
 
         <p class="text-center text-gray-200">

@@ -9,9 +9,9 @@
         <div class="flex mt-3 gap-2">
             <button @click="removePairs" class="w-1/2 px-4 py-2 bg-danger text-white rounded-md ">{{
                 $t('delete') }}</button>
-            <button @click="generateDigitPairs" class="w-1/2 px-4 py-2 bg-success text-white rounded-md ">{{
+            <button @click="generateDigitPairs" class="w-1/2 px-4 py-2 bg-gold text-white rounded-md ">{{
                 $t('confirm')
-            }}</button>
+                }}</button>
         </div>
     </section>
 </template>

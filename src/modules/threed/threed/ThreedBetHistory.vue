@@ -3,7 +3,7 @@
         <Loading :loading="loading" v-if="loading" />
         <div v-else class="p-3 space-y-3 !pb-20 min-h-screen">
             <div v-for="(bet, index) in bets" :key="index"
-                class="bg-primary p-4 rounded-lg shadow-md mb-3 cursor-pointer"
+                class="!bg-primary p-4 rounded-lg shadow-md mb-3 cursor-pointer"
                 @click="showBetDetails(bet.betting_code)">
                 <div class="my-2">
                     <span class="text-gray-400">{{ $t('betting_id') }}:</span>

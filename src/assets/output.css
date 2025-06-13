@@ -1132,6 +1132,18 @@ video {
   width: 100%;
 }
 
+.w-auto {
+  width: auto;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -1321,6 +1333,10 @@ video {
   overflow: hidden;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 .overflow-y-scroll {
   overflow-y: scroll;
 }
@@ -1459,7 +1475,7 @@ video {
 
 .border-primary {
   --tw-border-opacity: 1;
-  border-color: rgb(17 17 17 / var(--tw-border-opacity, 1));
+  border-color: rgb(79 70 229 / var(--tw-border-opacity, 1));
 }
 
 .border-red-500 {
@@ -1469,7 +1485,7 @@ video {
 
 .border-secondary {
   --tw-border-opacity: 1;
-  border-color: rgb(5 5 5 / var(--tw-border-opacity, 1));
+  border-color: rgb(99 102 241 / var(--tw-border-opacity, 1));
 }
 
 .border-success {
@@ -1498,7 +1514,7 @@ video {
 
 .\!border-b-primary {
   --tw-border-opacity: 1 !important;
-  border-bottom-color: rgb(17 17 17 / var(--tw-border-opacity, 1)) !important;
+  border-bottom-color: rgb(79 70 229 / var(--tw-border-opacity, 1)) !important;
 }
 
 .border-b-gray {
@@ -1543,7 +1559,7 @@ video {
 
 .\!bg-primary {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1)) !important;
 }
 
 .\!bg-purple-200 {
@@ -1553,7 +1569,7 @@ video {
 
 .\!bg-secondary {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(5 5 5 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1)) !important;
 }
 
 .\!bg-yellow-100 {
@@ -1591,17 +1607,12 @@ video {
 
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1));
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1));
 }
 
 .bg-secondary {
   --tw-bg-opacity: 1;
-  background-color: rgb(5 5 5 / var(--tw-bg-opacity, 1));
-}
-
-.bg-success {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 111 62 / var(--tw-bg-opacity, 1));
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1));
 }
 
 .bg-warning {
@@ -1617,6 +1628,11 @@ video {
 .bg-yellow-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1));
+}
+
+.\!bg-gold {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(234 185 91 / var(--tw-bg-opacity, 1)) !important;
 }
 
 .bg-gradient-to-tr {
@@ -1936,17 +1952,12 @@ video {
 
 .\!text-primary {
   --tw-text-opacity: 1 !important;
-  color: rgb(17 17 17 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(79 70 229 / var(--tw-text-opacity, 1)) !important;
 }
 
 .\!text-red-500 {
   --tw-text-opacity: 1 !important;
   color: rgb(239 68 68 / var(--tw-text-opacity, 1)) !important;
-}
-
-.\!text-success {
-  --tw-text-opacity: 1 !important;
-  color: rgb(19 111 62 / var(--tw-text-opacity, 1)) !important;
 }
 
 .\!text-yellow-500 {
@@ -1991,7 +2002,7 @@ video {
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(17 17 17 / var(--tw-text-opacity, 1));
+  color: rgb(79 70 229 / var(--tw-text-opacity, 1));
 }
 
 .text-red-500 {
@@ -2007,11 +2018,6 @@ video {
 .text-smoke {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
-}
-
-.text-success {
-  --tw-text-opacity: 1;
-  color: rgb(19 111 62 / var(--tw-text-opacity, 1));
 }
 
 .text-warning {
@@ -2153,17 +2159,22 @@ video {
 
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1));
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-secondary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(5 5 5 / var(--tw-bg-opacity, 1));
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-yellow-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(202 138 4 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:\!bg-primary:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1)) !important;
 }
 
 .hover\:bg-opacity-90:hover {
@@ -2176,7 +2187,7 @@ video {
 
 .focus\:border-secondary:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(5 5 5 / var(--tw-border-opacity, 1));
+  border-color: rgb(99 102 241 / var(--tw-border-opacity, 1));
 }
 
 .focus\:outline-none:focus {

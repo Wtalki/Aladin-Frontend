@@ -1,5 +1,5 @@
 <template>
-    <main v-for="(data, index) in twodResults" :key="index" class="rounded-lg my-3 p-3 bg-primary">
+    <main v-for="(data, index) in twodResults" :key="index" class="rounded-lg my-3 p-3 !bg-primary">
         <h5>{{ data?.date }}</h5>
         <section class="w-full mt-4">
             <div class="rounded-t-lg px-3 py-2">
@@ -15,7 +15,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <h6 class="font-semibold">2D</h6>
-                        <p class="!text-success font-bold text-xl">
+                        <p class="!text-gold font-bold text-xl">
                             {{ data?.result_1100 ?? '--' }}
                         </p>
                     </div>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <h6 class="font-semibold">2D</h6>
-                        <p class="!text-success font-bold text-xl">
+                        <p class="!text-gold font-bold text-xl">
                             {{ data?.result_1200 ?? '--' }}
                         </p>
                     </div>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <h6 class="font-semibold">2D</h6>
-                        <p class="!text-success font-bold text-xl">
+                        <p class="!text-gold font-bold text-xl">
                             {{ data?.result_300 ?? '--' }}
                         </p>
                     </div>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <h6 class="font-semibold">2D</h6>
-                        <p class="!text-success font-bold text-xl">
+                        <p class="!text-gold font-bold text-xl">
                             {{ data?.result_430 ?? '--' }}
                         </p>
                     </div>
@@ -86,13 +86,13 @@
                 <div class="flex justify-between w-full">
                     <div class="flex flex-col items-center">
                         <h6 class="font-semibold">Modern</h6>
-                        <p class="!text-success font-bold text-xl">
+                        <p class="!text-gold font-bold text-xl">
                             {{ data?.modern_930 ?? '--' }}
                         </p>
                     </div>
                     <div class="flex flex-col items-center">
                         <h6 class="font-semibold">Internet</h6>
-                        <p class="!text-success font-bold text-xl">
+                        <p class="!text-gold font-bold text-xl">
                             {{ data?.internet_930 ?? '--' }}
                         </p>
                     </div>
@@ -103,13 +103,13 @@
                 <div class="flex justify-between w-full">
                     <div class="flex flex-col items-center">
                         <h6 class="font-semibold">Modern</h6>
-                        <p class="!text-success font-bold text-xl">
+                        <p class="!text-gold font-bold text-xl">
                             {{ data?.modern_200 ?? '--' }}
                         </p>
                     </div>
                     <div class="flex flex-col items-center">
                         <h6 class="font-semibold">Internet</h6>
-                        <p class="!text-success font-bold text-xl">
+                        <p class="!text-gold font-bold text-xl">
                             {{ data?.internet_200 ?? '--' }}
                         </p>
                     </div>
@@ -123,9 +123,9 @@
 import { onMounted } from 'vue'
 import { useTwodResultHistory } from '@/modules/twod/composables/useTwodResultHistory'
 
-const { twodResults,fetchTwodResults } = useTwodResultHistory()
+const { twodResults, fetchTwodResults } = useTwodResultHistory()
 
-onMounted(async() => {
+onMounted(async () => {
     await fetchTwodResults()
 })
 </script>

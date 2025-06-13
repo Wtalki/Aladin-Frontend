@@ -8,7 +8,7 @@
             </div>
             <table class="w-full border-collapse border border-gray-700 text-white">
                 <thead>
-                    <tr class="bg-primary">
+                    <tr class="!bg-primary">
                         <th class="text-center p-3 border border-gray-700">ဂဏန်းများ</th>
                         <th class="text-center p-3 border border-gray-700">ထိုးငွေပမာဏ</th>
                     </tr>
@@ -19,13 +19,13 @@
                         <td class="text-center border border-gray-700">
                             <div class="flex justify-center items-center">
                                 <input :value="detail.betting_amount" disabled
-                                    class="w-24 p-2 text-center bg-primary border border-gray-600 text-white rounded-md focus:outline-none" />
+                                    class="w-24 p-2 text-center !bg-primary border border-gray-600 text-white rounded-md focus:outline-none" />
                             </div>
                         </td>
                     </tr>
                 </tbody>
                 <tbody>
-                    <tr class="bg-primary">
+                    <tr class="!bg-primary">
                         <td class="text-center font-semibold border border-gray-700 py-2">{{ $t('total') }}</td>
                         <td class="text-center border border-gray-700">
                             <div class="flex justify-center items-center">

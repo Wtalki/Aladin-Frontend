@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-primary min-h-screen flex flex-col items-center justify-between appWidth">
+    <div class="!bg-primary min-h-screen flex flex-col items-center justify-between appWidth">
         <div class="p-4 w-full max-w-md mb-14">
-            <h1 class="text-xl font-bold text-success mb-4 text-center">{{ $t('Update_Your_Info') }}</h1>
+            <h1 class="text-xl font-bold text-gold mb-4 text-center">{{ $t('Update_Your_Info') }}</h1>
             <form @submit.prevent="updateProfile">
                 <div class="relative w-28 mx-auto mb-3">
                     <img alt="Profile picture" class="rounded-full w-28 h-28 object-cover"
@@ -28,8 +28,7 @@
                         disabled />
                 </div>
 
-                <button class="w-full py-3 rounded-full bg-success text-white font-bold" type="submit"
-                    :disabled="loading">
+                <button class="w-full py-3 rounded-full bg-gold text-white font-bold" type="submit" :disabled="loading">
                     {{ loading ? $t('Updating') + '...' : $t('Update_Info') }}
                 </button>
             </form>

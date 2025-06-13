@@ -6,13 +6,10 @@
                     {{ $t(type) }}
                 </h5>
                 <div class="flex flex-wrap justify-center gap-2">
-                    <div
-                        v-for="number in quickNumbers[type]"
-                        :key="number.key"
+                    <div v-for="number in quickNumbers[type]" :key="number.key"
                         class="p-2 rounded flex justify-center items-center w-[65px] h-[65px] cursor-pointer text-white"
-                        :class="number.isSelected ? 'bg-success' : 'bg-gray-500'"
-                        @click="handleQuickNumbers(type, number)"
-                    >
+                        :class="number.isSelected ? 'bg-gold' : 'bg-gray-500'"
+                        @click="handleQuickNumbers(type, number)">
                         {{ number.key }}
                     </div>
                 </div>

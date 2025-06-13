@@ -18,7 +18,7 @@
                     </div>
                     <div class="my-2 text-gray-400">
                         {{ $t('win_type') }}:
-                        <span class="p-1 rounded bg-success betData" v-if="win.win">ဒဲ့ပေါက်သည်</span>
+                        <span class="p-1 rounded bg-gold betData" v-if="win.win">ဒဲ့ပေါက်သည်</span>
                         <span class="p-1 rounded bg-gold betData" v-if="win.round_win">သွပ်ပေါက်သည်</span>
                     </div>
                     <div class="my-2 text-gray-400">

@@ -29,7 +29,7 @@
             </div>
 
             <button v-if="store.selectedTime"
-                class="flex justify-center items-center gap-2 p-3 w-full text-white bg-primary border border-gold rounded-md mt-10 hover:bg-opacity-90 transition"
+                class="flex justify-center items-center gap-2 p-3 w-full text-white !bg-primary border border-gold rounded-md mt-10 hover:bg-opacity-90 transition"
                 @click="nextStep()">
                 {{ $t('next') }}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="21" height="21" viewBox="0 0 448 512">

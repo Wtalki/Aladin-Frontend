@@ -6,7 +6,7 @@
         <main v-else class="bg-secondary">
             <div class="flex flex-col w-full mx-auto rounded-lg overflow-auto min-h-screen">
                 <div class="flex justify-between px-3 items-center">
-                    <div class="cursor-pointer flex justify-center items-center text-success font-semibold"
+                    <div class="cursor-pointer flex justify-center items-center text-gold font-semibold"
                         @click="handleColorModal">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="green" class="w-8 h-8" viewBox="0 0 512 512">
@@ -28,12 +28,12 @@
                     <button v-for="number in filteredNumbers" :key="number.number" @click="addThreedNumbers(number)"
                         :class="[
                             'm-2 border rounded flex flex-col justify-between items-center w-14 h-14 cursor-pointer transition-all',
-                            (threedNumbers.includes(number.number) && number.remaining_limit_amount > 0) ? 'bg-success text-white' : '!bg-gray-200',
+                            (threedNumbers.includes(number.number) && number.remaining_limit_amount > 0) ? 'bg-gold text-white' : '!bg-gray-200',
                             number.remaining_limit_amount == 0 ? 'opacity-50 cursor-not-allowed' : ''
                         ]" :disabled="number.remaining_limit_amount == 0">
                         <div class="mt-1 text-lg font-semibold">{{ number.number }}</div>
                         <div class="w-full rounded" :class="{
-                            'bg-success h-1': number.remaining_limit_amount >= (number.original_limit_amount / 2),
+                            'bg-gold h-1': number.remaining_limit_amount >= (number.original_limit_amount / 2),
                             'bg-gold h-1': number.remaining_limit_amount < (number.original_limit_amount / 2) && number.remaining_limit_amount > (number.original_limit_amount / 10),
                             'bg-danger h-1': number.remaining_limit_amount <= (number.original_limit_amount / 10) && number.remaining_limit_amount > 0,
                             'bg-gray-500 h-1': number.remaining_limit_amount == 0
@@ -69,7 +69,7 @@
                             class="w-full bg-danger text-white py-2 rounded-lg font-semibold">{{ $t('clear_all')
                             }}</button>
                         <button @click="handleBetThreedSubmit"
-                            class="w-full bg-success text-white py-2 rounded-lg font-semibold flex items-center justify-center">
+                            class="w-full bg-gold text-white py-2 rounded-lg font-semibold flex items-center justify-center">
                             {{ $t('order_numbers') }} -
                             <span class="bg-danger text-white ml-2 px-2 rounded-full text-sm">
                                 {{ threedNumbers?.length }}

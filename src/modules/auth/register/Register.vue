@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center justify-center min-h-screen">
-        <div class="bg-primary min-h-screen flex flex-col items-center justify-between appWidth">
+        <div class="!bg-primary min-h-screen flex flex-col items-center justify-between appWidth">
             <div class="flex justify-start items-start w-full mt-2 ps-4">
                 <router-link to="/"
                     class="hover:bg-gray-200 border border-[#808080] p-2 rounded-2xl shadow-sm transition-all duration-200">
@@ -9,12 +9,12 @@
             </div>
             <div class="p-4 w-full max-w-md mb-14">
                 <div class="flex justify-center mb-6">
-                    <img :src="require('@/assets/icons/88Lotto.png')" width="230" alt="Logo" />
+                    <img :src="require('@/assets/icons/logo.png')" width="150" alt="Logo" />
                 </div>
-                <h1 class="text-4xl font-bold text-success mb-2">{{ $t('register') }}</h1>
+                <h1 class="text-4xl font-bold text-gold mb-2">{{ $t('register') }}</h1>
                 <p class="text-gray-100 mb-4">{{ $t('enter_personal_info') }}</p>
                 <form @submit.prevent="SignUp">
-                    <div class="mb-4">
+                    <!-- <div class="mb-4">
                         <label class="block text-gray-200 mb-2">{{ $t('select_region') }}</label>
                         <div class="flex space-x-3">
                             <label @click="handleSelectRegion('my')"
@@ -32,7 +32,7 @@
                                 <span class="text-gray-800">{{ $t('thailand') }}</span>
                             </label>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="mb-3">
                         <label class="block text-gray-200 mb-2">{{ $t('name') }}</label>
@@ -74,7 +74,7 @@
                     </div>
 
                     <button
-                        class="w-full py-3 rounded-full bg-success text-white font-bold flex items-center justify-center"
+                        class="w-full py-3 rounded-full bg-gold text-white font-bold flex items-center justify-center"
                         type="submit" :disabled="loading">
                         <div v-if="loading" class="flex items-center">
                             <svg aria-hidden="true" class="inline w-5 h-5 text-primary animate-spin fill-gray-600"
@@ -93,9 +93,9 @@
                 </form>
 
                 <div class="text-center mt-2">
-                    <p class="text-gray-500">
+                    <p class="text-light">
                         {{ $t('already_have_account') }}
-                        <router-link class="text-success" to="/login">{{ $t('login') }}</router-link>
+                        <router-link class="text-gold" to="/login">{{ $t('login') }}</router-link>
                     </p>
                 </div>
             </div>

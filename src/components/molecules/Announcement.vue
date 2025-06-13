@@ -8,7 +8,7 @@
                 09123456789</marquee>
         </div>
         <div class="py-1 md:py-2 text-[13px] px-3 rounded-md bg-gold">
-            88LOTTO
+            ALADIN
         </div>
     </nav>
 </template>

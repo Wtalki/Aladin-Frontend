@@ -4,7 +4,7 @@
             <div class="flex flex-wrap justify-center gap-2">
                 <div v-for="(item, index) in quickKeys" :key="index" @click="handleQuickKeys(item)"
                     class="p-2 rounded flex justify-center items-center w-[65px] h-[65px] cursor-pointer text-white"
-                    :class="item.isSelected ? 'bg-success' : 'bg-gray-500'">
+                    :class="item.isSelected ? 'bg-gold' : 'bg-gray-500'">
                     {{ item.key }}
                 </div>
             </div>
@@ -17,7 +17,7 @@
                     <div class="flex flex-wrap justify-center gap-2">
                         <div v-for="number in quickNumbers[type]" :key="number"
                             class="p-2 rounded flex justify-center items-center w-[65px] h-[65px] cursor-pointer text-white"
-                            :class="number.isSelected ? 'bg-success' : 'bg-gray-500'"
+                            :class="number.isSelected ? 'bg-gold' : 'bg-gray-500'"
                             @click="handleQuickNumbers(type, number)">
                             {{ number.key }}
                         </div>
