@@ -1,11 +1,12 @@
 <template>
   <div class="p-4 space-y-4">
     <div class="flex flex-row gap-2">
-      <input v-model="searchQuery" type="text" placeholder="Search games..." class="w-full p-2 border rounded" />
-      <select v-model="selectedPlatform" class="w-full p-2 border rounded">
+      <input v-model="searchQuery" @input="debouncedSearch" type="text" placeholder="Search games..." class="w-full p-2 border rounded" />
+
+      <select v-model="selectedPlatform"  @input="debouncedSearch" class="w-full p-2 border rounded">
         <option value="" selected>All Platforms</option>
-        <option v-for="platform in platforms" :key="platform" :value="platform">
-          {{ platform }}
+        <option v-for="platform in platforms" :key="platform" :value="platform.product_code">
+          {{ platform.product_name }}
         </option>
       </select>
     </div>
@@ -21,7 +22,6 @@
         </div>
       </div>
     </div>
-
     <div v-if="loading" class="h-screen text-center text-light">
       Loading...
     </div>
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import debounce from 'lodash/debounce'
 export default {
   data() {
     return {
@@ -38,35 +39,48 @@ export default {
       loading: false,
       hasMore: true,
       selectedPlatform: '',
-      platforms: ['PG', 'JILI', 'CQ9', 'JDB', 'Spadegaming'],
+      platforms: [],
+      debouncedSearch: null,
+      searchQuery:''
+
     }
   },
+
   methods: {
     getRouteData() {
       this.categoryName = this.$route.params.categoryName
     },
-    async fetchGames() {
-      if (this.loading || !this.hasMore) return
-      this.loading = true
+   async fetchGames(customPage = null) {
+  if (this.loading || !this.hasMore) return
+  this.loading = true
 
-      try {
-        const res = await this.$axios.get('game/lists', {
-          params: {
-            categoryName: this.categoryName,
-            page: this.page
-          }
-        })
+  const pageToFetch = customPage ?? this.page
 
-        this.gameLists.push(...res.data.data)
-
-        this.page++
-        this.hasMore = res.data.current_page < res.data.last_page
-      } catch (e) {
-        console.error('Failed to load games', e)
-      } finally {
-        this.loading = false
+  try {
+    const res = await this.$axios.get('game/lists', {
+      params: {
+        categoryName: this.categoryName,
+        page: pageToFetch,
+        search: this.searchQuery,
+        product_id: this.selectedPlatform || null
       }
-    },
+    })
+
+    if (pageToFetch === 1) {
+      this.gameLists = res.data.gamelist.data // new search = replace
+    } else {
+      this.gameLists.push(...res.data.gamelist.data)
+    }
+
+    this.platforms = res.data.product
+    this.page = pageToFetch + 1
+    this.hasMore = res.data.gamelist.current_page < res.data.gamelist.last_page
+  } catch (e) {
+    console.error('Failed to load games', e)
+  } finally {
+    this.loading = false
+  }
+},
     handleScroll() {
       const bottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100
       if (bottom) {
@@ -79,6 +93,14 @@ export default {
     this.fetchGames()
     window.addEventListener('scroll', this.handleScroll)
   },
+  created() {
+  this.debouncedSearch = debounce(() => {
+    this.page = 1
+    this.gameLists = []       // Reset the game list
+    this.hasMore = true       // Reset load-more flag
+    this.fetchGames()
+  }, 300)
+},
   unmounted() {
     window.removeEventListener('scroll', this.handleScroll)
   }
