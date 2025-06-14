@@ -1,11 +1,11 @@
 <template>
     <Card class="flex justify-between items-center !bg-light font-bold">
         <div class="flex">
-            <WalletIcon class="mr-1 text-smoke" />
-            <span class="text-warning">{{ $t('Wallet') }}</span>
+            <WalletIcon class="mr-1 text-gold" />
+            <span class="text-gold">{{ $t('Wallet') }}</span>
         </div>
         <div class="flex items-center" v-if="user">
-            <div class="text-warning mr-1">{{ showWallet ? user.wallet : '****' }}</div>
+            <div class="text-gold mr-1">{{ showWallet ? user.wallet : '****' }}</div>
             <EyeIcon v-if="!showWallet" @click="showWallet = true" />
             <EyeClose v-else @click="showWallet = false" />
         </div>

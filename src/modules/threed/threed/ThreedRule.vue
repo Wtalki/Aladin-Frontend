@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center min-h-screen bg-gray-900">
         <div class="bg-secondary w-full max-w-3xl rounded-lg shadow-lg p-3">
-            <h1 class="text-warning text-center text-2xl font-semibold">စည်းကမ်းချက်များ</h1>
+            <h1 class="text-gold text-center text-2xl font-semibold">စည်းကမ်းချက်များ</h1>
 
             <div v-for="(item, index) in accordionItems" :key="index">
                 <div class="border border-gray-700 p-3 mx-2 mt-3 rounded-lg transition-all duration-300 cursor-pointer flex justify-between items-center hover:!bg-primary"

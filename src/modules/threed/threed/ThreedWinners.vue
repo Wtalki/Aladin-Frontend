@@ -17,27 +17,27 @@
                     </div>
                     <div v-for="(detail, detailIndex) in winner.totals" :key="detailIndex"
                         class="p-3 rounded-lg bg-secondary mt-3 shadow-sm">
-                        <div class="my-2 text-warning">
+                        <div class="my-2 text-gold">
                             {{ $t('winning_number') }}:
                             <span class="text-light font-semibold">{{ detail.number }}</span>
                         </div>
-                        <div class="my-2 text-warning">
+                        <div class="my-2 text-gold">
                             {{ $t('bet_amount') }}:
                             <span class="text-light font-semibold">{{ detail.betting_amount }} {{ user.region == 'my' ?
                                 $t('MMK') : $t('THB') }}</span>
                         </div>
-                        <div class="my-2 text-warning">
+                        <div class="my-2 text-gold">
                             {{ $t('win_type') }}:
                             <span class="p-1 rounded bg-gold text-light text-sm" v-if="detail.win">ဒဲ့ပေါက်သည်</span>
                             <span class="p-1 rounded bg-gold text-light text-sm"
                                 v-if="detail.round_win">သွပ်ပေါက်သည်</span>
                         </div>
-                        <div class="my-2 text-warning">
+                        <div class="my-2 text-gold">
                             {{ $t('win_amount') }}:
                             <span class="text-light font-semibold">{{ detail.compensation_amount }} {{ user.region ==
                                 'my' ? $t('MMK') : $t('THB') }}</span>
                         </div>
-                        <div class="my-2 text-warning">
+                        <div class="my-2 text-gold">
                             {{ $t('result_date') }}:
                             <span class="text-light font-semibold">{{ detail.result_date }}</span>
                         </div>

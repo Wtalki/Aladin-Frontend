@@ -61,8 +61,8 @@
             </button>
         </form>
         <h3 class="text-center font-semibold text-danger mt-5">
-            {{ $t('withdraw_issue') }} <router-link to="/service" class="text-warning underline">{{ $t('contact')
-                }}</router-link>
+            {{ $t('withdraw_issue') }} <router-link to="/service" class="text-gold underline">{{ $t('contact')
+            }}</router-link>
         </h3>
     </section>
 </template>

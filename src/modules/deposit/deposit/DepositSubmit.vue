@@ -66,7 +66,7 @@
 
             <h3 class="text-center font-semibold text-danger">
                 {{ $t('payment_issue') }}
-                <router-link to="/service" class="text-warning underline">{{ $t('contact') }}</router-link>
+                <router-link to="/service" class="text-gold underline">{{ $t('contact') }}</router-link>
             </h3>
         </div>
     </section>

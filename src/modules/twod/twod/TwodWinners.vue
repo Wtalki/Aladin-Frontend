@@ -10,8 +10,8 @@
                             <img v-if="winner.avatar" :src="winner.avatar"
                                 class="!w-12 !h-12 object-cover rounded-full" />
                             <div class="ml-3">
-                                <div class="text-warning text-md font-semibold">{{ winner.name }}</div>
-                                <div class="text-warning text-md font-semibold">{{ winner.phone }}</div>
+                                <div class="text-gold text-md font-semibold">{{ winner.name }}</div>
+                                <div class="text-gold text-md font-semibold">{{ winner.phone }}</div>
                             </div>
                         </div>
                     </div>
@@ -19,15 +19,15 @@
                         class="p-3 rounded-lg bg-secondary mt-3 shadow-sm">
                         <div class="my-2 text-light">
                             ပေါက်ဂဏန်း:
-                            <span class="text-warning font-semibold">{{ detail.number }}</span>
+                            <span class="text-gold font-semibold">{{ detail.number }}</span>
                         </div>
                         <div class="my-2 text-light">
                             ထိုးကြေး:
-                            <span class="text-warning font-semibold">{{ detail.betting_amount }}</span>
+                            <span class="text-gold font-semibold">{{ detail.betting_amount }}</span>
                         </div>
                         <div class="my-2 text-light">
                             ရငွေ:
-                            <span class="text-warning font-semibold">{{ detail.compensation_amount }}</span>
+                            <span class="text-gold font-semibold">{{ detail.compensation_amount }}</span>
                         </div>
                         <div class="my-2 text-light">
                             ထီထိုးချိန်:
@@ -44,7 +44,7 @@
                         </div>
                         <div class="my-2 text-light">
                             ရက်စွဲ:
-                            <span class="text-warning font-semibold">{{ formatDate(detail.created_at) }}</span>
+                            <span class="text-gold font-semibold">{{ formatDate(detail.created_at) }}</span>
                         </div>
                     </div>
                 </div>

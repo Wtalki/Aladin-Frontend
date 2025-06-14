@@ -39,7 +39,7 @@
                                             </h1>
                                             <span class="!text-blue-500">{{ $t('date') }} - {{
                                                 $formatDate(transaction?.created_at, null, "DD-MMM-YYYY HH:mm A")
-                                            }}</span>
+                                                }}</span>
                                         </div>
                                     </div>
                                     <h1 class="font-bold text-light flex-shrink-0">{{ transaction?.amount }} {{
@@ -51,7 +51,7 @@
                                 </div>
                                 <div v-else-if="transaction.status === 'pending'">
                                     <div class="border border-dashed mb-3 border-yellow-500" />
-                                    <div class="text-warning text-xs">{{ $t('checking_transaction') }}</div>
+                                    <div class="text-gold text-xs">{{ $t('checking_transaction') }}</div>
                                 </div>
                                 <div v-else>
                                     <div class="border border-dashed mb-3 !border-success" />
@@ -82,7 +82,7 @@
                                             </h1>
                                             <span class="!text-blue-500">{{ $t('date') }} - {{
                                                 $formatDate(transaction?.created_at, null, "DD-MMM-YYYY HH:mm A")
-                                            }}</span>
+                                                }}</span>
                                         </div>
                                     </div>
                                     <h1 class="text-light font-bold">{{ transaction.amount }} {{
@@ -94,7 +94,7 @@
                                 </div>
                                 <div v-else-if="transaction.status === 'pending'">
                                     <div class="border border-dashed mb-3 border-yellow-500" />
-                                    <div class="text-warning text-xs">{{ $t('checking_transaction') }}</div>
+                                    <div class="text-gold text-xs">{{ $t('checking_transaction') }}</div>
                                 </div>
                                 <div v-else>
                                     <div class="border border-dashed mb-3 !border-success" />
@@ -130,7 +130,7 @@
                                         </h1>
                                         <span class="!text-blue-500">{{ $t('date') }} - {{
                                             $formatDate(transaction?.created_at)
-                                        }}</span>
+                                            }}</span>
                                     </div>
                                 </div>
                                 <h1 class="text-light font-bold">{{ transaction?.amount }} {{ $t('MMK') }}</h1>

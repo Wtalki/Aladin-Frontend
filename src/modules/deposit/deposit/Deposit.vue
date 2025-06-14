@@ -16,7 +16,7 @@
                 </div>
             </div>
             <Button type="button" @click="nextStep"
-                class="py-3 w-full px-4 text-center rounded leading-5 text-primary bg-warning border border-secondary">{{
+                class="py-3 w-full px-4 text-center rounded leading-5 text-primary bg-gold border border-secondary">{{
                     $t('next') }}</Button>
         </section>
     </section>

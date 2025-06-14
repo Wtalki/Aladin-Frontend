@@ -1,5 +1,5 @@
 <template>
-    <h1 class="text-2xl font-bold text-warning text-center">{{ formattedTime }}</h1>
+    <h1 class="text-2xl font-bold text-gold text-center">{{ formattedTime }}</h1>
 </template>
 
 <script>

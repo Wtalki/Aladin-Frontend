@@ -31,7 +31,7 @@
                                 <img :src="winner.image" class="rounded-full" style="width: 2.5rem; height: 2.5rem" />
                                 <div>
                                     <span class="text-lg opacity-75">{{ winner.phone }}</span>
-                                    <span class="text-xs font-thin line-clamp-1 text-warning"> {{ winner.amount }} {{
+                                    <span class="text-xs font-thin line-clamp-1 text-gold"> {{ winner.amount }} {{
                                         $t('MMK') }}
                                     </span>
                                 </div>

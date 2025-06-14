@@ -20,7 +20,7 @@
             </h3>
         </Card>
         <Button :name="$t('confirmation')"
-            class="py-3 w-full px-4 text-center rounded leading-5 text-primary bg-warning border border-secondary"
+            class="py-3 w-full px-4 text-center rounded leading-5 text-primary bg-gold border border-secondary"
             @click="$router.push('/')" />
     </div>
 </template>
