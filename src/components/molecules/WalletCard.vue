@@ -1,5 +1,5 @@
 <template>
-    <Card class="flex justify-between items-center !bg-light font-bold">
+    <Card class="flex justify-between items-center !bg-primary font-bold">
         <div class="flex">
             <WalletIcon class="mr-1 text-gold" />
             <span class="text-gold">{{ $t('Wallet') }}</span>

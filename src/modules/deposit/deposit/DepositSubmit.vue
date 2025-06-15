@@ -4,14 +4,14 @@
             <Loading />
         </div>
         <div v-else class="space-y-5 p-5 h-[150vh]">
-            <h1 class="text-center text-lg text-light font-semibold">{{ $t('deposit_submit') }}</h1>
+            <h1 class="text-center text-lg text-primary font-semibold">{{ $t('deposit_submit') }}</h1>
             <h3 class="text-center font-semibold text-danger mb-5">{{ $t('transfer_instruction') }}</h3>
 
-            <span class="font-semibold text-light">{{ $t('choose_deposit_account') }}</span>
+            <span class="font-semibold text-primary">{{ $t('choose_deposit_account') }}</span>
             <Card v-for="(account, index) in paymentAccounts" :key="index"
                 :class="selectedBankAccount === account.id ? '!bg-secondary border border-3 border-light' : '!bg-primary'"
                 class="!p-3 cursor-pointer flex space-x-2 items-center" @click="handleSelectBankAccount(account)">
-                <div class="flex flex-col font-semibold space-y-3 text-light">
+                <div class="flex flex-col font-semibold space-y-3 text-primary">
                     <span>{{ $t('account_name') }} : {{ account.acc_name }}</span>
                     <span>{{ $t('account_number') }} : {{ account.acc_number }}</span>
                     <span>{{ $t('min_transfer_amount') }} : {{ account.min_amount }}</span>
@@ -21,7 +21,7 @@
 
             <form class="space-y-3" @submit.prevent="submit">
                 <div class="space-y-3">
-                    <span class="font-semibold text-light">{{ $t('amount') }}</span>
+                    <span class="font-semibold text-primary">{{ $t('amount') }}</span>
                     <Input v-model="paymentAmount" type="number"
                         class="p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:border-secondary outline-none"
                         :placeholder="$t('enter_amount')" />
@@ -33,7 +33,7 @@
                 </div>
 
                 <!-- <div class="space-y-3">
-                    <span class="font-semibold text-light">{{ $t('transaction_id') }}</span>
+                    <span class="font-semibold text-primary">{{ $t('transaction_id') }}</span>
                     <Input v-model="realPaymentId" type="number"
                         class="p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:border-secondary outline-none"
                         :placeholder="$t('transaction_id')" />
@@ -41,7 +41,7 @@
                 </div> -->
 
                 <div class="space-y-3">
-                    <span class="font-semibold text-light">{{ $t('payment_screenshot') }}</span>
+                    <span class="font-semibold text-primary">{{ $t('payment_screenshot') }}</span>
                     <input type="file" @change="handleScreenshotUpload" accept="image/*"
                         class="block w-full text-sm cursor-pointer text-smoke file:text-smoke file:mr-4 file:p-3 bg-light rounded-lg file:border-0 file:text-sm" />
                     <Error :message="errors['screenshot']" v-if="errors['screenshot']" />

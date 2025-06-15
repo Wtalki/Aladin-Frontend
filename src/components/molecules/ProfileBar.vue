@@ -3,7 +3,7 @@
         <div class="flex items-center">
             <div v-if="user" class="flex items-center">
                 <img :src="user.profile" class="!w-12 !h-12 border rounded-full mr-2" />
-                <div class="flex flex-col text-sm font-semibold text-light">
+                <div class="flex flex-col text-sm font-semibold text-primary">
                     <span class="text-xl">{{ user.name }}</span>
                     <span>{{ user.phone }}</span>
                 </div>
@@ -11,7 +11,7 @@
             <div v-else class="flex items-center">
                 <img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
                     class="!w-10 border rounded-full mr-2" />
-                <Button type="link" route="/login" className="py-1 px-2 bg-gold text-light font-semibold rounded-md">
+                <Button type="link" route="/login" className="py-1 px-2 bg-gold text-primary font-semibold rounded-md">
                     အကောင့်ဝင်ပါ </Button>
             </div>
         </div>

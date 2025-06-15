@@ -1,5 +1,5 @@
 <template>
-    <section class="flex flex-col w-full mx-auto rounded-lg bg-secondary">
+    <section class="flex flex-col w-full mx-auto rounded-lg">
         <!-- <section v-if="currentDay == 'Sat' || currentDay == 'Sun'"
             class="text-center flex justify-center items-center h-screen">
             <h5 class="text-danger font-bold text-xl">{{ $t('today_2d_closed') }}</h5>
@@ -11,10 +11,10 @@
             </div>
             <main v-else>
                 <div class="flex flex-col w-full mx-auto rounded-lg overflow-auto min-h-screen">
-                    <h6 class="cursor-pointer flex justify-center items-center text-gold font-semibold mt-3 w-full"
+                    <h6 class="cursor-pointer flex justify-center items-center text-primary font-semibold mt-3 w-full"
                         @click="handleColorModal">
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="green" class="w-8 h-8" viewBox="0 0 512 512">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="blue" class="w-8 h-8" viewBox="0 0 512 512">
                                 <path
                                     d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
                             </svg>
@@ -26,15 +26,15 @@
                         <button v-for="number in numbersData" :key="number.number" @click="addTwodNumbers(number)"
                             :class="[
                                 'm-2 border rounded flex flex-col justify-between items-center w-14 h-14 cursor-pointer transition-all',
-                                (twodNumbers.includes(number.number) && number.remaining_limit_amount > 0) ? 'bg-gold text-white' : '!bg-gray-200',
+                                (twodNumbers.includes(number.number) && number.remaining_limit_amount > 0) ? '!bg-gold text-white' : '!bg-light',
                                 number.remaining_limit_amount == 0 ? 'opacity-50 cursor-not-allowed' : ''
                             ]" :disabled="number.remaining_limit_amount == 0 || number.status == false">
                             <div class="mt-1 text-lg font-semibold">{{ number.number }}</div>
                             <div class="w-full rounded" :class="{
-                                'bg-gold h-1': number.remaining_limit_amount >= (number.original_limit_amount / 2),
-                                'bg-gold h-1': number.remaining_limit_amount < (number.original_limit_amount / 2) && number.remaining_limit_amount > (number.original_limit_amount / 10),
-                                'bg-danger h-1': number.remaining_limit_amount <= (number.original_limit_amount / 10) && number.remaining_limit_amount > 0,
-                                'bg-gray-500 h-1': (number.remaining_limit_amount == 0 || number.status == false)
+                                '!bg-success h-1': number.remaining_limit_amount >= (number.original_limit_amount / 2),
+                                '!bg-gold h-1': number.remaining_limit_amount < (number.original_limit_amount / 2) && number.remaining_limit_amount > (number.original_limit_amount / 10),
+                                '!bg-danger h-1': number.remaining_limit_amount <= (number.original_limit_amount / 10) && number.remaining_limit_amount > 0,
+                                '!bg-gray h-1': (number.remaining_limit_amount == 0 || number.status == false)
                             }"></div>
                         </button>
                     </div>
@@ -50,7 +50,7 @@
 
                         <div class="flex space-x-2 mt-3">
                             <button @click="handleRoundModal"
-                                class="w-full bg-gold text-black py-2 rounded-lg font-semibold">{{ $t('section')
+                                class="w-full !bg-gold text-black py-2 rounded-lg font-semibold">{{ $t('section')
                                 }}</button>
                             <button @click="handleManualModal"
                                 class="w-full bg-gray-500 text-white py-2 rounded-lg font-semibold">{{ $t('enter')
@@ -65,12 +65,12 @@
 
                         <div class="flex space-x-2 mt-3">
                             <button @click="handleRemoveNumbers"
-                                class="w-full bg-danger text-white py-2 rounded-lg font-semibold">{{ $t('clear_all')
+                                class="w-full !bg-danger text-white py-2 rounded-lg font-semibold">{{ $t('clear_all')
                                 }}</button>
                             <button @click="handleBetTwodSubmit"
-                                class="w-full bg-gold text-white py-2 rounded-lg font-semibold flex items-center justify-center">
+                                class="w-full !bg-gold text-white py-2 rounded-lg font-semibold flex items-center justify-center">
                                 {{ $t('order_numbers') }} -
-                                <span class="bg-danger text-white ml-2 px-2 rounded-full text-sm">
+                                <span class="!bg-danger text-white ml-2 px-2 rounded-full text-sm">
                                     {{ twodNumbers.length }}
                                 </span>
                             </button>
@@ -275,7 +275,7 @@ export default {
 .bet-container {
     position: fixed;
     bottom: 64px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 1rem;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
     border-bottom: 14px solid whitesmoke;

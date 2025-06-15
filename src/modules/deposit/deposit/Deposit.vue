@@ -1,11 +1,11 @@
 <template>
     <section class="space-y-5 p-5 h-[120vh] overflow-y-scroll">
-        <h1 class="text-center text-lg text-light font-semibold">{{ $t('deposit') }}</h1>
+        <h1 class="text-center text-lg text-primary font-semibold">{{ $t('deposit') }}</h1>
         <div v-if="loading" class="h-[430px] flex items-center">
             <Loading />
         </div>
         <section class="space-y-5" v-else>
-            <h3 class="text-center text-light font-semibold">{{ $t('select_payment') }}</h3>
+            <h3 class="text-center text-primary font-semibold">{{ $t('select_payment') }}</h3>
             <div class="rounded-md shadow-md bg-white py-3 flex flex-wrap justify-center items-center gap-3">
                 <div v-for="(payment, index) in bankTypes" :key="index"
                     :class="selectedBankType === payment.id ? 'border-[3px] border-gold' : ''"

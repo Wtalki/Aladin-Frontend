@@ -1,5 +1,5 @@
 <template>
-    <div class="appWidth mx-auto bg-secondary">
+    <div class="appWidth mx-auto">
         <AppNavbar />
         <router-view />
         <AppFooter />

@@ -1,23 +1,23 @@
 <template>
     <section class="mx-auto space-y-5 p-5 !pb-32 w-full">
         <WalletCard />
-        <div class="bg-light p-5 rounded-md shadow-md flex justify-between items-center">
+        <div class="!bg-primary p-5 rounded-md shadow-md flex justify-between items-center">
             <Button type="link" route="/deposit"
-                class="flex flex-col items-center text-sm text-primary font-semibold cursor-pointer">
+                class="flex flex-col items-center text-sm text-light font-semibold cursor-pointer">
                 <div class="bg-secondary rounded-full !w-12 !h-12 flex justify-center items-center">
                     <img class="!w-7 !h-7" :src="require('@/assets/icons/wallet_topup.png')" />
                 </div>
                 {{ $t('deposit') }}
             </Button>
             <Button type="link" route="/withdraw"
-                class="flex flex-col items-center text-sm text-primary font-semibold cursor-pointer">
+                class="flex flex-col items-center text-sm text-light font-semibold cursor-pointer">
                 <div class="bg-secondary rounded-full !w-12 !h-12 flex justify-center items-center">
                     <img class="!w-7 !h-7" :src="require('@/assets/icons/wallet_withdraw.png')" />
                 </div>
                 {{ $t('withdraw') }}
             </Button>
             <Button type="link" to="/payment-history"
-                class="flex flex-col items-center text-sm text-primary font-semibold cursor-pointer">
+                class="flex flex-col items-center text-sm text-light font-semibold cursor-pointer">
                 <div class="bg-secondary rounded-full !w-12 !h-12 flex justify-center items-center">
                     <img class="!w-7 !h-7" :src="require('@/assets/icons/transaction_history.png')" />
                 </div>

@@ -1,21 +1,21 @@
 <template>
     <section class="space-y-5 p-5 h-screen overflow-y-scroll">
-        <h1 class="text-center text-lg !text-light font-semibold">{{ $t('Transaction_Record') }}</h1>
+        <h1 class="text-center text-lg text-primary font-semibold">{{ $t('Transaction_Record') }}</h1>
         <div class="mb-4 border-b border-gray-200">
             <ul class="flex text-sm font-medium text-center">
                 <li class="w-full" @click="activeTab = 'topup'">
-                    <button class="w-full p-4 border-b-2"
-                        :class="activeTab === 'topup' ? '!border-b-light !text-light font-bold' : 'text-smoke font-bold !border-b-primary'">{{
+                    <button class="w-full p-4"
+                        :class="activeTab === 'topup' ? 'border-b-2 !border-b-gold text-gold font-bold' : 'text-smoke font-bold'">{{
                             $t('deposit_history') }}</button>
                 </li>
                 <li class="w-full" @click="activeTab = 'withdraw'">
-                    <button class="w-full p-4 border-b-2"
-                        :class="activeTab === 'withdraw' ? '!border-b-light !text-light font-bold' : 'text-smoke font-bold !border-b-primary'">{{
+                    <button class="w-full p-4"
+                        :class="activeTab === 'withdraw' ? 'border-b-2 !border-b-gold text-gold font-bold' : 'text-smoke font-bold'">{{
                             $t('withdraw_history') }}</button>
                 </li>
                 <li class="w-full" @click="activeTab = 'refund'">
-                    <button class="w-full p-4 border-b-2"
-                        :class="activeTab === 'refund' ? '!border-b-light !text-light font-bold' : 'text-smoke font-bold !border-b-primary'">{{
+                    <button class="w-full p-4"
+                        :class="activeTab === 'refund' ? 'border-b-2 !border-b-gold text-gold font-bold' : 'text-smoke font-bold'">{{
                             $t('refund_history') }}</button>
                 </li>
             </ul>
@@ -39,7 +39,7 @@
                                             </h1>
                                             <span class="!text-blue-500">{{ $t('date') }} - {{
                                                 $formatDate(transaction?.created_at, null, "DD-MMM-YYYY HH:mm A")
-                                                }}</span>
+                                            }}</span>
                                         </div>
                                     </div>
                                     <h1 class="font-bold text-light flex-shrink-0">{{ transaction?.amount }} {{
@@ -82,7 +82,7 @@
                                             </h1>
                                             <span class="!text-blue-500">{{ $t('date') }} - {{
                                                 $formatDate(transaction?.created_at, null, "DD-MMM-YYYY HH:mm A")
-                                                }}</span>
+                                            }}</span>
                                         </div>
                                     </div>
                                     <h1 class="text-light font-bold">{{ transaction.amount }} {{
@@ -130,7 +130,7 @@
                                         </h1>
                                         <span class="!text-blue-500">{{ $t('date') }} - {{
                                             $formatDate(transaction?.created_at)
-                                            }}</span>
+                                        }}</span>
                                     </div>
                                 </div>
                                 <h1 class="text-light font-bold">{{ transaction?.amount }} {{ $t('MMK') }}</h1>

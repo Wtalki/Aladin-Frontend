@@ -1,26 +1,26 @@
 <template>
-    <section class="flex flex-col w-full min-h-screen mx-auto rounded bg-secondary">
-        <div class="flex items-center justify-between px-4 mt-4 font-bold text-white">
+    <section class="flex flex-col w-full min-h-screen mx-auto rounded">
+        <div class="flex items-center justify-between px-4 mt-4 font-bold text-primary">
             <div>{{ currentDate }}</div>
         </div>
 
-        <form class="w-full px-4 pb-24 mx-auto shadow-md">
-            <table class="w-full mt-4 text-white border border-collapse border-gray-700">
+        <form class="w-full px-4 pb-24 mx-auto">
+            <table class="w-full mt-4 text-white border border-collapse border-light">
                 <thead>
-                    <tr class="bg-gray-800">
-                        <th class="p-3 text-center border border-gray-700">{{ $t('number') }}</th>
-                        <th class="p-3 text-center border border-gray-700">{{ $t('bet_amount') }}</th>
-                        <th class="w-20 p-3 text-center border border-gray-700">{{ $t('cancel') }}</th>
+                    <tr class="!bg-primary">
+                        <th class="p-3 text-center border border-light">{{ $t('number') }}</th>
+                        <th class="p-3 text-center border border-light">{{ $t('bet_amount') }}</th>
+                        <th class="w-20 p-3 text-center border border-light">{{ $t('cancel') }}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(threedNumber, index) in threedStore.threedNumbers" :key="index" class="bg-gray-900">
-                        <td class="py-2 font-semibold text-center border border-gray-700">{{ threedNumber.number }}</td>
-                        <td class="text-center border border-gray-700">
+                    <tr v-for="(threedNumber, index) in threedStore.threedNumbers" :key="index" class="bg-secondary">
+                        <td class="py-2 font-semibold text-center border border-light">{{ threedNumber.number }}</td>
+                        <td class="text-center border border-light">
                             <input v-model="threedNumber.betting_amount" @input="updateAmount($event, index)"
-                                class="w-24 p-2 text-center text-white bg-gray-800 border border-gray-600 rounded-md focus:outline-none" />
+                                class="w-24 p-2 text-center text-white !bg-secondary border border-gray-600 rounded-md focus:outline-none" />
                         </td>
-                        <td class="border border-gray-700">
+                        <td class="border border-light">
                             <div @click="removeThreedNumber(index)"
                                 class="flex items-center justify-center cursor-pointer text-danger">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
@@ -31,17 +31,17 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="bg-gray-800">
-                        <td class="py-2 font-semibold text-center border border-gray-700">{{ $t('total') }}</td>
-                        <td class="text-center border border-gray-700">
+                    <tr class="!bg-primary">
+                        <td class="py-2 font-semibold text-center border border-light">{{ $t('total') }}</td>
+                        <td class="text-center border border-light">
                             <div class="flex items-center justify-center">
                                 <input :value="totalAmount()" disabled
-                                    class="w-24 p-2 text-center text-white bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-gold focus:outline-none" />
+                                    class="w-24 p-2 text-center text-white !bg-secondary border border-gray-600 rounded-md focus:ring-2 focus:ring-gold focus:outline-none" />
                             </div>
                             <span v-if="errors?.wallet" class="block text-sm font-medium text-danger">{{ errors?.wallet
-                                }}</span>
+                            }}</span>
                         </td>
-                        <td class="border border-gray-700"></td>
+                        <td class="border border-light"></td>
                     </tr>
                 </tbody>
             </table>

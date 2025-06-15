@@ -32,18 +32,18 @@
                     </span>
                 </button>
                 <div ref="notificationModal" id="notificationModal"
-                    class="bg-white w-[97%] h-[500px] overflow-auto shadow-lg rounded-lg z-[100] absolute top-[100%] right-2"
+                    class="bg-secondary w-[97%] h-[500px] overflow-auto shadow-lg rounded-lg z-[100] absolute top-[100%] right-2"
                     :class="isNotificationModalOpen ? 'opacity-100' : 'opacity-0 invisible'">
                     <div class="flex px-3 py-3 items-center justify-between">
                         <div class="flex items-center space-x-2">
-                            <div class="font-bold text-xl !text-primary">{{ $t('Notifications') }}</div>
+                            <div class="font-bold text-xl text-light">{{ $t('Notifications') }}</div>
                             <div
                                 class="!w-6 !h-6 flex items-center justify-center text-sm font-bold text-white bg-danger rounded-full">
                                 {{ unreadCount }}
                             </div>
                         </div>
                         <Cancel @click="() => (isNotificationModalOpen = !isNotificationModalOpen)"
-                            class="!w-8 !h-8 cursor-pointer text-primary" />
+                            class="!w-8 !h-8 cursor-pointer text-light" />
                     </div>
                     <p @click="markAsAllRead" v-if="unreadCount > 0"
                         class="text-right text-xs font-semibold text-gray-500 hover:underline py-1 cursor-pointer mr-2">

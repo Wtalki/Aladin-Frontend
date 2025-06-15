@@ -1,7 +1,7 @@
 <template>
-    <div class="!bg-primary min-h-screen flex flex-col items-center justify-between appWidth">
+    <div class="min-h-screen flex flex-col items-center justify-between appWidth">
         <div class="p-4 w-full max-w-md mb-14">
-            <h1 class="text-xl font-bold text-gold mb-4 text-center">{{ $t('Update_Your_Info') }}</h1>
+            <h1 class="text-xl font-bold text-primary mb-4 text-center">{{ $t('Update_Your_Info') }}</h1>
             <form @submit.prevent="updateProfile">
                 <div class="relative w-28 mx-auto mb-3">
                     <img alt="Profile picture" class="rounded-full w-28 h-28 object-cover"
@@ -15,14 +15,14 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="block text-gray-100 mb-2">{{ $t('Name') }}</label>
+                    <label class="block text-gray-100 mb-2 text-primary">{{ $t('Name') }}</label>
                     <input v-model="form.name"
                         class="w-full px-4 py-3 rounded-full bg-gray-100 text-primary border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         :placeholder="$t('Enter_Your_Name')" type="text" />
                 </div>
 
                 <div class="mb-3">
-                    <label class="block text-gray-100 mb-2">{{ $t('Phone') }}</label>
+                    <label class="block text-gray-100 mb-2 text-primary">{{ $t('Phone') }}</label>
                     <input v-model="form.phone"
                         class="w-full px-4 py-3 rounded-full text-gray bg-gray-300 border border-gray-300" type="text"
                         disabled />

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-secondary h-screen overflow-y-scroll space-y-3 p-3 appWidth">
+    <div class="h-screen overflow-y-scroll space-y-3 p-3 appWidth">
         <nav class="custom-tabs w-100 text-center">
             <div :class="['tab-item', { 'active-tab': tab === 'tab1' }]" @click="selectTab('tab1')">{{
                 $t('service_phone_numbers') }}</div>
@@ -14,7 +14,7 @@
                 <div v-for="(contact, index) in contacts" :key="index"
                     class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 !bg-primary !border-gold shadow-md">
                     <a v-if="contact.phone" :href="'tel:' + contact.phone"
-                        class="text-xl font-bold underline tracking-wider">{{ contact.phone }}</a>
+                        class="text-xl font-bold tracking-wider text-light">{{ contact.phone }}</a>
                     <div class="flex items-center gap-2">
                         <a v-if="contact.telegram" :href="contact.telegram" target="blank"
                             class="transition-transform hover:scale-110">

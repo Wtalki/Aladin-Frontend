@@ -2,7 +2,7 @@
     <nav class="flex items-center justify-between pl-3 border rounded-md border-gold">
         <img :src="require('@/assets/icons/announcement.webp')" alt="speaker" class="w-[20px]" />
         <div class="flex items-center px-3">
-            <marquee :class="marqueeStyle" class="text-sm text-light md:text-md" style="font-family: lato"
+            <marquee :class="marqueeStyle" class="text-sm text-primary md:text-md" style="font-family: lato"
                 scrolldelay="100" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
                 မြန်မာနိုင်ငံအနှံ့ကိုယ်စားလှယ်အလိုရှိသည်။အရေအတွက်ကန့်သတ်ထားပါသည်။စိတ်ဝင်စားသောမိတ်ဆွေများဖုန်းကိုဆက်သွယ်လိုက်ပါ။
                 09123456789</marquee>

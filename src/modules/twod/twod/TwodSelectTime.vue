@@ -1,15 +1,15 @@
 <template>
-    <div class="h-screen bg-secondary" v-if="loading">
+    <div class="h-screen" v-if="loading">
         <Loading />
     </div>
-    <section v-else class="flex flex-col w-full mx-auto bg-secondary">
+    <section v-else class="flex flex-col w-full mx-auto">
         <!-- <section v-if="store.isWeekend" class="flex justify-center items-center h-screen">
             <h5 class="text-danger text-lg font-semibold">{{ $t('today_2d_closed') }}</h5>
         </section> -->
         <!-- v-else -->
         <section class="pt-5 px-3 text-center h-screen">
             <div>
-                <h5 class="mb-4 text-light text-lg"
+                <h5 class="mb-4 text-primary text-lg"
                     v-if="store.canBetForEarlyMorning || store.canBetForMorning || store.canBetForEarlyEvening || store.canBetForEvening">
                     {{ $t('select_betting_time') }}</h5>
                 <h5 v-else class="mt-5 text-danger text-lg font-semibold">{{ $t('2d_betting_time_passed') }}</h5>

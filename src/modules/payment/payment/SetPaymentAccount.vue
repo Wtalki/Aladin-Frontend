@@ -1,6 +1,6 @@
 <template>
     <section class="space-y-5 p-5 appWidth mx-auto bg-secondary h-[150vh]">
-        <h1 class="text-center text-lg text-light font-semibold">ဘဏ်အကောင့်သတ်မှတ်မည်</h1>
+        <h1 class="text-center text-lg text-primary font-semibold">ဘဏ်အကောင့်သတ်မှတ်မည်</h1>
         <ul class="font-semibold list-disc text-gold px-4">
             <li>ငွေထုတ်မည့်ဘဏ်အကောင့်သတ်မှတ်ပါ။</li>
             <li>ဘဏ်တစ်ခုကိုအကောင့်တစ်ခုသာသတ်မှတ်နိုင်ပါသည်။</li>

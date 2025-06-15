@@ -1,6 +1,6 @@
 <template>
     <section class="space-y-5 h-[120vh] overflow-y-scroll p-5">
-        <h1 class="text-center text-lg text-light font-semibold">{{ $t('withdraw') }}</h1>
+        <h1 class="text-center text-lg text-primary font-semibold">{{ $t('withdraw') }}</h1>
         <ul class="text-gold space-y-3">
             <li>{{ $t('select_withdraw_account') }}</li>
             <li>{{ $t('add_bank_accounts_instruction') }}</li>
@@ -19,7 +19,7 @@
                 <div class="flex justify-center space-x-2 font-semibold items-center">
                     <img :src="account.banktype.image" :alt="account.type?.toUpperCase()"
                         class="w-16 rounded-md cursor-pointer" />
-                    <div class="flex flex-col font-semibold space-y-3 text-light">
+                    <div class="flex flex-col font-semibold space-y-3 text-primary">
                         <span>{{ $t('account_name') }} : {{ account.acc_name }}</span>
                         <span>{{ $t('account_number') }} : {{ account.acc_number }}</span>
                         <span>{{ $t('min_withdraw_amount') }} : {{ account.min_amount }}</span>
@@ -62,7 +62,7 @@
         </form>
         <h3 class="text-center font-semibold text-danger mt-5">
             {{ $t('withdraw_issue') }} <router-link to="/service" class="text-gold underline">{{ $t('contact')
-            }}</router-link>
+                }}</router-link>
         </h3>
     </section>
 </template>
