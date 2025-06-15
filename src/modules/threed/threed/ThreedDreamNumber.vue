@@ -1,6 +1,6 @@
 <template>
-    <section class="flex flex-col items-center p-3 !bg-secondary">
-        <h1 class="text-center text-xl text-gold mb-5">{{ $t('dream_numbers') }}</h1>
+    <section class="flex flex-col items-center p-3">
+        <h1 class="text-center text-xl text-primary mb-5">{{ $t('dream_numbers') }}</h1>
         <div class="grid grid-cols-4 gap-2">
             <div v-for="item in items" :key="item.id" class="!bg-primary text-light rounded-lg space-y-3 shadow-md p-2">
                 <h2 class="text-lg text-center font-semibold">{{ item.name }}</h2>
