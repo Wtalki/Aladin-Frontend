@@ -112,24 +112,13 @@ export default {
 
             try {
                 const res = await this.$axios.post('/get/callback/key', params)
-                const key = res.data.callback_key
-                this.gamePlay(key)
+                this.iframeUrl = res.data.url
+                console.log(res);
             } catch (err) {
                 console.error('Launch game error', err)
             }
         },
-        async gamePlay(key) {
-            try {
-                const res = await this.$axios.post('/get/game/url', { callback_key: key })
-                const gameUrl = res.data.data.launch_url
-
-                if (gameUrl) {
-                    this.iframeUrl = gameUrl
-                }
-            } catch (err) {
-                console.error('Get game URL failed', err)
-            }
-        },
+       
         closeIframe() {
             this.showIframe = false
             this.iframeUrl = ''
