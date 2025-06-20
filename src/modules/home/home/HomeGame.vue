@@ -1,7 +1,8 @@
 <template>
     <div class="p-4 space-y-4">
         <div class="flex flex-row gap-2">
-            <input v-model="searchQuery" @input="debouncedSearch" type="text" placeholder="Search games..." class="w-full p-2 border rounded" />
+            <input v-model="searchQuery" @input="debouncedSearch" type="text" placeholder="Search games..."
+                class="w-full p-2 border rounded" />
 
             <select v-model="selectedPlatform" @input="debouncedSearch" class="w-full p-2 border rounded">
                 <option value="" selected>All Platforms</option>
@@ -12,10 +13,11 @@
         </div>
 
         <div class="grid grid-cols-3 gap-3 pb-20">
-            <div v-for="game in gameLists" :key="game.id" @click="playGame(game)" class="rounded-md shadow-md overflow-hidden cursor-pointer transition-transform hover:scale-105">
+            <div v-for="game in gameLists" :key="game.id" @click="playGame(game)"
+                class="rounded-md shadow-md overflow-hidden cursor-pointer transition-transform hover:scale-105">
                 <img :src="game.image" :alt="game.game_name" class="w-full h-32 object-cover" />
                 <div class="p-2 text-center">
-                    <h2 class="text-sm font-semibold text-light truncate">
+                    <h2 class="text-sm font-semibold text-primary truncate">
                         {{ game.game_name }}
                     </h2>
                 </div>
@@ -118,7 +120,7 @@ export default {
                 console.error('Launch game error', err)
             }
         },
-       
+
         closeIframe() {
             this.showIframe = false
             this.iframeUrl = ''

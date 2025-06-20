@@ -1,5 +1,5 @@
 <template>
-    <section class="flex flex-col items-center p-3 bg-secondary min-h-screen space-y-4 !pb-32">
+    <section class="flex flex-col items-center p-3 min-h-screen space-y-4 !pb-32">
         <div v-for="result in results" :key="result.id" class="!bg-primary w-full text-light p-4 rounded-lg">
             <div class="flex justify-between items-center mt-3">
                 <div class="flex flex-col items-center">

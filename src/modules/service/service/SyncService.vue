@@ -65,10 +65,10 @@ export default {
         return {
             contacts: [
                 {
-                    phone: '+959770340091',
-                    telegram: 'https://t.me/lotto88mm',
-                    viber: 'viber://chat?number=+959770340091',
-                    line: 'https://lin.ee/VYpYXtG'
+                    phone: '+959123456789',
+                    telegram: 'https://t.me/',
+                    viber: 'viber://chat?number=+',
+                    line: 'https://lin.ee/'
                 }
             ],
             loading: false,

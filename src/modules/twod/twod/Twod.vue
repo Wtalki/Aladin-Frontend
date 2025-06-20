@@ -1,5 +1,5 @@
 <template>
-    <section class="flex flex-col items-center p-5 bg-secondary min-h-screen">
+    <section class="flex flex-col items-center p-5 min-h-screen">
         <div class="bg-gold text-light p-3 rounded-lg w-full text-center flex justify-between items-center">
             <span>
                 {{ $t('rul') }}
@@ -12,23 +12,23 @@
                 <img class="!w-12" :src="require('@/assets/images/webp/night.png')" />
                 <span class="mt-2">{{ $t('dream_numbers') }}</span>
             </router-link> -->
-            <router-link to="/twod/winners" class="flex flex-col items-center text-light font-semibold text-md">
+            <router-link to="/twod/winners" class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="!w-12" :src="require('@/assets/images/svg/winner.svg')" />
                 <span class="mt-2">{{ $t('winners') }}</span>
             </router-link>
-            <router-link to="/twod/history" class="flex flex-col items-center text-light font-semibold text-md">
+            <router-link to="/twod/history" class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="!w-12" :src="require('@/assets/images/webp/history.webp')" />
                 <span class="mt-2">{{ $t('history') }}</span>
             </router-link>
-            <router-link to="/twod/holidays" class="flex flex-col items-center text-light font-semibold text-md">
+            <router-link to="/twod/holidays" class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="!w-12" :src="require('@/assets/images/webp/holiday.webp')" />
                 <span class="mt-2">{{ $t('holiday') }}</span>
             </router-link>
         </section>
 
         <section class="w-full flex flex-col items-center mt-6">
-            <span class="text-5xl font-bold text-gold animate-pulse">{{ value?.live ?? '--' }}</span>
-            <div class="w-full flex justify-between items-center mt-4 text-light">
+            <span class="text-7xl font-bold text-gold animate-pulse">{{ value?.live ?? '--' }}</span>
+            <div class="w-full flex justify-between items-center mt-4 text-primary">
                 <div class="flex flex-col items-center">
                     <h1 class="text-xl font-semibold">Set</h1>
                     <p>{{ value?.live_set ?? '--' }}</p>
@@ -43,7 +43,7 @@
                     <span class="font-semibold">Updated</span>
                     <span>{{ value?.current_time }}</span>
                 </div>
-                <span class="text-light">{{ value?.current_date }}</span>
+                <span class="text-primary">{{ value?.current_date }}</span>
             </div>
         </section>
 

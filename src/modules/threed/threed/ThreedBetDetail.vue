@@ -1,10 +1,10 @@
 <template>
-    <section class="flex flex-col w-full mx-auto rounded bg-secondary min-h-screen p-3">
+    <section class="flex flex-col w-full mx-auto rounded min-h-screen p-3">
         <Loading :loading="loading" v-if="loading" />
         <div v-else>
-            <div class="my-2">
-                <span class="text-gray-400">{{ $t('date') }}:</span>
-                <span class="!text-blue-500 font-semibold">{{ formatDate(betDetails[0]?.created_at) }}</span>
+            <div class="my-2 text-primary font-semibold">
+                <span>{{ $t('date') }}:</span>
+                <span>{{ formatDate(betDetails[0]?.created_at) }}</span>
             </div>
             <table class="w-full border-collapse border border-gray-700 text-white">
                 <thead>
@@ -13,7 +13,7 @@
                         <th class="text-center p-3 border border-gray-700">{{ $t('bet_amount') }}</th>
                     </tr>
                 </thead>
-                <tbody v-for="(detail, index) in betDetails" :key="index" class="bg-gray-900">
+                <tbody v-for="(detail, index) in betDetails" :key="index" class="bg-secondary">
                     <tr>
                         <td class="text-center font-semibold border border-gray-700 py-2">{{ detail.number }}</td>
                         <td class="text-center border border-gray-700">
@@ -30,7 +30,7 @@
                         <td class="text-center border border-gray-700">
                             <div class="flex justify-center items-center">
                                 <input :value="totalAmount" disabled
-                                    class="w-24 p-2 text-center bg-gray-700 border border-gray-600 text-white rounded-md focus:ring-2 focus:ring-gold focus:outline-none" />
+                                    class="w-24 p-2 text-center !bg-primary border border-gray-600 text-white rounded-md focus:ring-2 focus:ring-gold focus:outline-none" />
                             </div>
                         </td>
                     </tr>

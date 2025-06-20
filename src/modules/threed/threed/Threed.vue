@@ -1,5 +1,5 @@
 <template>
-    <section class="flex flex-col items-center p-5 bg-secondary min-h-screen">
+    <section class="flex flex-col items-center p-5 min-h-screen">
         <div class="bg-gold text-light p-2 mb-2 rounded-lg w-full flex justify-center items-center">
             3D ထွက်မည့်ရက် : {{ threedSetting?.result_date }}
         </div>
@@ -11,22 +11,23 @@
         </div>
 
         <section class="w-full flex justify-between items-center mt-4 space-x-4">
-            <router-link to="/threed/dreams-number" class="flex flex-col items-center text-light font-semibold text-md">
+            <router-link to="/threed/dreams-number"
+                class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="w-14" :src="require('@/assets/images/webp/night.png')" />
                 <span class="mt-2">{{ $t('dream_numbers') }}</span>
             </router-link>
-            <router-link to="/threed/winners" class="flex flex-col items-center text-light font-semibold text-md">
+            <router-link to="/threed/winners" class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="w-14" :src="require('@/assets/images/svg/winner.svg')" />
                 <span class="mt-2">{{ $t('winners') }}</span>
             </router-link>
-            <router-link to="/threed/history" class="flex flex-col items-center text-light font-semibold text-md">
+            <router-link to="/threed/history" class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="w-14" :src="require('@/assets/images/webp/history.webp')" />
                 <span class="mt-2">{{ $t('history') }}</span>
             </router-link>
         </section>
 
         <section class="w-full flex flex-col items-center mt-6">
-            <span class="text-5xl font-bold text-gold animate-pulse">{{ live?.result }}</span>
+            <span class="text-7xl font-bold text-gold animate-pulse">{{ live?.result }}</span>
             <div class="text-gray-400 mt-3 text-md flex items-center space-x-2">
                 <i class="fas fa-check text-gold"></i>
                 <span class="text-gold font-semibold">Updated</span>
