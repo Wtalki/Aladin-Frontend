@@ -15,7 +15,8 @@
                     အကောင့်ဝင်ပါ </Button>
             </div>
         </div>
-        <div>
+        <div class="flex items-center space-x-3">
+            <AppDownload />
             <AppLocale />
         </div>
     </section>
@@ -25,11 +26,13 @@
 import { mapGetters } from 'vuex';
 import Button from '@/components/atoms/Button.vue'
 import AppLocale from '@/layouts/default/AppLocale.vue'
+import AppDownload from '@/layouts/default/AppDownload.vue';
 
 export default {
     components: {
         Button,
-        AppLocale
+        AppLocale,
+        AppDownload
     },
     computed: mapGetters(['user', 'token'])
 }

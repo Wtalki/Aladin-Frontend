@@ -5,7 +5,6 @@
         </Button>
 
         <section class="flex items-center space-x-3">
-            <AppDownload />
             <div class="p-2 rounded-lg bg-secondary text-light flex items-center space-x-2" v-if="user">
                 <div>{{ user.region == 'my' ? $t('MMK') : $t('THB') }} {{ user.wallet }}</div>
                 <router-link to="/deposit">
@@ -71,15 +70,13 @@ import BellIcon from '@/components/icons/BellIcon.vue'
 import Cancel from '@/components/icons/Cancel.vue'
 import Button from '@/components/atoms/Button.vue'
 import NotificationCard from '@/components/molecules/NotificationCard.vue'
-import AppDownload from './AppDownload.vue';
 
 export default {
     components: {
         BellIcon,
         Cancel,
         Button,
-        NotificationCard,
-        AppDownload
+        NotificationCard
     },
     data() {
         return {
