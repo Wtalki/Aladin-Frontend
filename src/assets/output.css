@@ -1946,11 +1946,6 @@ video {
   color: rgb(220 38 38 / var(--tw-text-opacity, 1));
 }
 
-.text-dark {
-  --tw-text-opacity: 1;
-  color: rgb(30 41 59 / var(--tw-text-opacity, 1));
-}
-
 .text-gold {
   --tw-text-opacity: 1;
   color: rgb(255 206 0 / var(--tw-text-opacity, 1));
@@ -2199,10 +2194,6 @@ video {
 @media (min-width: 768px) {
   .md\:order-2 {
     order: 2;
-  }
-
-  .md\:w-auto {
-    width: auto;
   }
 
   .md\:space-x-0 > :not([hidden]) ~ :not([hidden]) {

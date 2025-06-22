@@ -1,5 +1,5 @@
 <template>
-  <button v-if="showInstallPrompt" @click="installApp" type="button">
+  <button v-if="!isStandalone" @click="installApp" type="button">
     <svg viewBox="0 0 24 24" fill="none" width="27" height="27" xmlns="http://www.w3.org/2000/svg" stroke="#0260BF">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -20,19 +20,20 @@ import { ref, onMounted } from 'vue'
 
 const showInstallPrompt = ref(false)
 const deferredPrompt = ref(null)
+const isStandalone = ref(false)
 
 onMounted(() => {
-  const isStandalone =
+  isStandalone.value =
     window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone
 
-  if (!isStandalone) {
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault()
-      deferredPrompt.value = e
-      showInstallPrompt.value = true
-      console.log('beforeinstallprompt captured')
-    })
-  }
+  // if (!isStandalone.value) {
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault()
+    deferredPrompt.value = e
+    showInstallPrompt.value = true
+    console.log('beforeinstallprompt captured')
+  })
+  // }
 })
 
 const installApp = async () => {
