@@ -1335,10 +1335,6 @@ video {
   white-space: nowrap;
 }
 
-.\!rounded-full {
-  border-radius: 9999px !important;
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1595,11 +1591,6 @@ video {
   background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
 }
 
-.bg-primary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 96 191 / var(--tw-bg-opacity, 1));
-}
-
 .bg-secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(1 173 236 / var(--tw-bg-opacity, 1));
@@ -1707,11 +1698,6 @@ video {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .py-0\.5 {

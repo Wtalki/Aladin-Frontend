@@ -1,3 +1,4 @@
+import '../public/registerSW'
 import '@/plugins/global-css'
 import '@/plugins/abality'
 import '@/plugins/confirmation-service'
@@ -18,6 +19,7 @@ import store from '@/store/index'
 import axios from '@/libs/axios/index'
 import { createI18n } from 'vue-i18n'
 import { createPinia } from 'pinia'
+import './registerServiceWorker'
 
 const pinia = createPinia()
 const messages = {
