@@ -3,13 +3,18 @@
   "version": "0.1.0",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && npm run apk",
+    "apk": "copy android\\app\\build\\outputs\\apk\\debug\\app-debug.apk public\\aladinslots.apk",
     "lint": "eslint --ext .js,.vue .",
     "format": "prettier .  --write",
     "lint-fix": "eslint --fix --ext .js,.vue .",
     "watch": "tailwindcss -i ./src/assets/index.css -o ./src/assets/output.css --watch"
   },
   "dependencies": {
+    "@capacitor/android": "^7.4.0",
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.4.0",
+    "@capacitor/core": "^7.4.0",
     "@casl/ability": "^6.3.3",
     "@casl/vue": "^2.2.1",
     "@vuelidate/core": "^2.0.0",

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Aladin</string>
+    <string name="title_activity_main">Aladin</string>
+    <string name="package_name">com.aladin.app</string>
+    <string name="custom_url_scheme">com.aladin.app</string>
+</resources>
