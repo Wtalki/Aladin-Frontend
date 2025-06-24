@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     namespace "com.aladin.app"
     compileSdk rootProject.ext.compileSdkVersion
-
     defaultConfig {
         applicationId "com.aladin.app"
         minSdkVersion rootProject.ext.minSdkVersion
