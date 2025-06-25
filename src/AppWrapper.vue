@@ -1,8 +1,10 @@
 <template>
     <div v-if="!showRouterView" class="relative mx-auto appWidth">
-        <div class="absolute top-3 right-3 rounded-full px-2 py-1 !bg-primary cursor-pointer" @click="skipCountdown">{{
-            $t('Skip') }} {{ countdown }}</div>
-        <img src="/banners/banner1.jpg" class="w-full" alt="Wallpaper" />
+        <div class="absolute top-3 right-3 rounded-full px-2 py-1 text-light !bg-primary cursor-pointer"
+            @click="skipCountdown">{{
+                $t('Skip') }} {{ countdown }}</div>
+        <img src="https://i.pinimg.com/originals/91/0e/2f/910e2f848c3a386d3a965fc85efc9f2e.jpg" class="w-full"
+            alt="Wallpaper" />
     </div>
 
     <router-view v-else />
@@ -16,8 +18,7 @@ import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
 import EventBus from '@/libs/AppEventBus'
 
-// const showRouterView = ref(process.env.VUE_APP_ENV == 'production' ? false : true)
-const showRouterView = ref(true);
+const showRouterView = ref(process.env.VUE_APP_ENV == 'production' ? false : true)
 const countdown = ref(3)
 let countdownTimer = null
 
