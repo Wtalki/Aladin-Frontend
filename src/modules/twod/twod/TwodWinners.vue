@@ -4,7 +4,11 @@
         <Loading :loading="loading" v-if="loading" />
         <div v-else class="w-full pb-20">
             <div v-for="(winner, index) in winners" :key="index">
+<<<<<<< HEAD
                 <div v-if="winner.phone" class="bg-primary rounded-lg p-4 mb-4 shadow-md">
+=======
+                <div v-if="winner.phone" class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] rounded-lg p-4 mb-4 shadow-md">
+>>>>>>> 032a9fb (change color)
                     <div class="my-2">
                         <div class="flex items-center mt-2">
                             <img v-if="winner.avatar" :src="winner.avatar"

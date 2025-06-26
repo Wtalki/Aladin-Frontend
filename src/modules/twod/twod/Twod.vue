@@ -49,7 +49,11 @@
 
         <section class="w-full mt-6 space-y-5 !pb-32">
             <div v-for="time in ['1100', '1200', '300', '430']" :key="time"
+<<<<<<< HEAD
                 class="bg-primary text-light p-4 rounded-lg">
+=======
+                class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] text-light p-4 rounded-lg">
+>>>>>>> 032a9fb (change color)
                 <h1 class="text-xl font-semibold text-center">{{ timeFormat(time) }}</h1>
                 <div class="flex justify-between items-center mt-3">
                     <div class="flex flex-col items-center">

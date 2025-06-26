@@ -8,7 +8,11 @@
             </div>
             <table class="w-full border-collapse border border-gray-700 text-white">
                 <thead>
+<<<<<<< HEAD
                     <tr class="bg-primary">
+=======
+                    <tr class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)]">
+>>>>>>> 032a9fb (change color)
                         <th class="text-center p-3 border border-gray-700">{{ $t('numbers') }}</th>
                         <th class="text-center p-3 border border-gray-700">{{ $t('bet_amount') }}</th>
                     </tr>
@@ -19,18 +23,30 @@
                         <td class="text-center border border-gray-700">
                             <div class="flex justify-center items-center">
                                 <input :value="detail.betting_amount" disabled
+<<<<<<< HEAD
                                     class="w-24 p-2 text-center bg-primary border border-gray-600 text-white rounded-md focus:outline-none" />
+=======
+                                    class="w-24 p-2 text-center [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] border border-gray-600 text-white rounded-md focus:outline-none" />
+>>>>>>> 032a9fb (change color)
                             </div>
                         </td>
                     </tr>
                 </tbody>
                 <tbody>
+<<<<<<< HEAD
                     <tr class="bg-primary">
+=======
+                    <tr class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)]">
+>>>>>>> 032a9fb (change color)
                         <td class="text-center font-semibold border border-gray-700 py-2">{{ $t('total') }}</td>
                         <td class="text-center border border-gray-700">
                             <div class="flex justify-center items-center">
                                 <input :value="totalAmount" disabled
+<<<<<<< HEAD
                                     class="w-24 p-2 text-center bg-primary border border-gray-600 text-white rounded-md focus:ring-2 focus:ring-gold focus:outline-none" />
+=======
+                                    class="w-24 p-2 text-center [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] border border-gray-600 text-white rounded-md focus:ring-2 focus:ring-gold focus:outline-none" />
+>>>>>>> 032a9fb (change color)
                             </div>
                         </td>
                     </tr>

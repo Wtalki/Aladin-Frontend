@@ -7,7 +7,11 @@
         <form class="w-full px-4 pb-24 mx-auto">
             <table class="w-full mt-4 text-white border border-collapse border-light">
                 <thead>
+<<<<<<< HEAD
                     <tr class="bg-primary">
+=======
+                    <tr class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)]">
+>>>>>>> 032a9fb (change color)
                         <th class="p-3 text-center border border-light">{{ $t('number') }}</th>
                         <th class="p-3 text-center border border-light">{{ $t('bet_amount') }}</th>
                         <th class="w-20 p-3 text-center border border-light">{{ $t('cancel') }}</th>
@@ -31,7 +35,11 @@
                             </div>
                         </td>
                     </tr>
+<<<<<<< HEAD
                     <tr class="bg-primary">
+=======
+                    <tr class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)]">
+>>>>>>> 032a9fb (change color)
                         <td class="py-2 font-semibold text-center border border-light">{{ $t('total') }}</td>
                         <td class="text-center border border-light">
                             <div class="flex items-center justify-center">
