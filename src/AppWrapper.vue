@@ -16,8 +16,7 @@ import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
 import EventBus from '@/libs/AppEventBus'
 
-// const showRouterView = ref(process.env.VUE_APP_ENV == 'production' ? false : true)
-const showRouterView = ref(true);
+const showRouterView = ref(process.env.VUE_APP_ENV == 'production' ? false : true)
 const countdown = ref(3)
 let countdownTimer = null
 

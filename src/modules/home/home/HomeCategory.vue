@@ -1,17 +1,20 @@
 <template>
   <div class="p-2 grid grid-cols-2 gap-2">
-    <router-link to="/twod"
-      class=" text-light rounded-lg p-3 flex justify-center items-center cursor-pointer [background:linear-gradient(to_right,#01adec_60%,#0260bf_120%,#0260bf_100%)]">
-      2D
-    </router-link>
-    <router-link to="/threed"
-      class=" text-light rounded-lg p-3 flex justify-center items-center cursor-pointer [background:linear-gradient(to_right,#01adec_60%,#0260bf_120%,#0260bf_100%)]">
-      3D
-    </router-link>
-    <div v-for="(category, n) in categoryLists" :key="n"
-      class=" text-light rounded-lg p-3 flex justify-center items-center cursor-pointer [background:linear-gradient(to_right,#01adec_60%,#0260bf_120%,#0260bf_100%)]"
-      @click="showGame(category.category_name)">
-      {{ category.category_name }}
+    <div v-for="(category, n) in categoryLists" :key="n">
+      <router-link to="/twod" v-if="category.category_name == '2D'"
+        class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] text-light rounded-lg p-2 flex justify-center items-center cursor-pointer">
+        <img :src="category.image" class="w-24 h-24 object-cover" />
+      </router-link>
+
+      <router-link to="/threed" v-else-if="category.category_name == '3D'"
+        class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] text-light rounded-lg p-2 flex justify-center items-center cursor-pointer">
+        <img :src="category.image" class="w-24 h-24 object-cover" />
+      </router-link>
+
+      <div v-else class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] text-light rounded-lg p-2 flex justify-center items-center cursor-pointer"
+        @click="showGame(category.category_name)">
+        <img :src="category.image" class="w-24 h-24 object-cover" />
+      </div>
     </div>
   </div>
 </template>

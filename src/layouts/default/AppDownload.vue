@@ -1,5 +1,5 @@
 <template>
-  <button v-if="!isStandalone" @click="installApp" type="button">
+  <button @click="installApp" type="button">
     <svg viewBox="0 0 24 24" fill="none" width="27" height="27" xmlns="http://www.w3.org/2000/svg" stroke="#0260BF">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -16,37 +16,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-
-const showInstallPrompt = ref(false)
-const deferredPrompt = ref(null)
-const isStandalone = ref(false)
-
-onMounted(() => {
-  isStandalone.value =
-    window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone
-
-  // if (!isStandalone.value) {
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault()
-    deferredPrompt.value = e
-    showInstallPrompt.value = true
-    console.log('beforeinstallprompt captured')
-  })
-  // }
-})
-
-const installApp = async () => {
-  if (deferredPrompt.value) {
-    deferredPrompt.value.prompt()
-    const { outcome } = await deferredPrompt.value.userChoice
-    if (outcome === 'accepted') {
-      alert('User accepted the install prompt');
-    } else {
-      alert('User dismissed the install prompt');
-    }
-    deferredPrompt.value = null
-    showInstallPrompt.value = false
-  }
-}
+const installApp = () => {
+  const link = document.createElement('a');
+  link.href = '/aladinslots.apk';
+  link.download = 'aladinslots.apk';
+  link.target = 'blank';
+  link.click();
+};
 </script>

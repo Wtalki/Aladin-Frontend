@@ -5,7 +5,7 @@
             <WalletCard />
         </div>
     </div>
-    <section class="space-y-3 p-3 mt-14 min-h-screen overflow-y-auto" :class="token ? 'mt-14' : 'mt-0'">
+    <section class="space-y-3 p-3 mt-14 min-h-[120vh] overflow-y-scroll" :class="token ? 'mt-14' : 'mt-0'">
         <HomeCarousal />
         <Announcement />
         <HomeCategory />
