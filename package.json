@@ -15,6 +15,7 @@
     "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "^7.4.0",
     "@capacitor/core": "^7.4.0",
+    "@capacitor/live-updates": "^0.4.0",
     "@casl/ability": "^6.3.3",
     "@casl/vue": "^2.2.1",
     "@vuelidate/core": "^2.0.0",
