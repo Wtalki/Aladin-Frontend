@@ -1,6 +1,6 @@
 <template>
     <div class="fixed z-50 h-24 -bottom-2 appWidth overflow-hidden">
-        <div class="grid grid-cols-5 h-full !bg-primary">
+        <div class="grid grid-cols-5 h-full [background:linear-gradient(to_right,#01adec_60%,#0260bf_120%,#0260bf_100%)]">
             <Button class="inline-flex flex-col items-center justify-center px-5 hover:bg-secondary group" type="link"
                 route="/">
                 <HomeIcon class="mb-2 !text-gold" />

@@ -28,7 +28,7 @@
                 <div v-if="transactions.length">
                     <div v-for="(transaction, index) in transactions" :key="index">
                         <Button type="link" :route="`/deposit/${transaction.uuid}/detail`">
-                            <Card class="text-sm border border-gray-700 !p-3 cursor-pointer space-y-2 !bg-primary mb-2">
+                            <Card class="text-sm border border-gray-700 !p-3 cursor-pointer space-y-2 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] mb-2">
                                 <div class="flex justify-between items-center">
                                     <div class="flex space-x-2 items-center">
                                         <img v-if="transaction.bank_type" :src="transaction.bank_type?.image"
@@ -70,7 +70,7 @@
                 <div v-if="transactions.length">
                     <div v-for="(transaction, index) in transactions" :key="index">
                         <Button type="link" :route="`/withdraw/${transaction.uuid}/detail`">
-                            <Card class="text-sm border border-gray-700 !p-3 cursor-pointer space-y-2 !bg-primary mb-2">
+                            <Card class="text-sm border border-gray-700 !p-3 cursor-pointer space-y-2 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] mb-2">
                                 <div class="flex justify-between items-center">
                                     <div class="flex space-x-2 items-center">
                                         <img v-if="transaction.bank_account"
@@ -112,7 +112,7 @@
             <div v-if="activeTab === 'refund'" class="!pb-20">
                 <div v-if="transactions.length">
                     <div v-for="(transaction, index) in transactions" :key="index">
-                        <Card class="text-sm !p-3 cursor-pointer space-y-2 !bg-primary mb-2">
+                        <Card class="text-sm !p-3 cursor-pointer space-y-2 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] mb-2">
                             <div class="flex justify-between items-center">
                                 <div class="flex space-x-2 items-center">
                                     <div>

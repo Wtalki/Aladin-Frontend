@@ -12,7 +12,7 @@
                 <p class="text-lg text-center text-gold">{{ $t('service_description') }}</p>
 
                 <div v-for="(contact, index) in contacts" :key="index"
-                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 !bg-primary !border-gold shadow-md">
+                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] !border-gold shadow-md">
                     <a v-if="contact.phone" :href="'tel:' + contact.phone"
                         class="text-xl font-bold tracking-wider text-light">{{ contact.phone }}</a>
                     <div class="flex items-center gap-2">
@@ -37,13 +37,13 @@
                 <p class="text-lg text-center text-gold">{{ $t('official_channel_info') }}</p>
 
                 <div
-                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 !bg-primary !border-gold shadow-md">
+                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] !border-gold shadow-md">
                     <img src="@/assets/images/webp/facebook.webp" width="30" alt="Facebook" />
                     <a href="https://www.facebook.com/ALADINmm01" target="blank"
                         class="bg-gold p-2 rounded-lg cursor-pointer">{{ $t('follow_page') }}</a>
                 </div>
                 <div
-                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 !bg-primary !border-gold shadow-md">
+                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] !border-gold shadow-md">
                     <img src="@/assets/images/webp/youtube.png" width="30" alt="Telegram" />
                     <a href="https://www.youtube.com/@LottoMM2D" target="blank"
                         class="bg-danger p-2 rounded-lg cursor-pointer">{{ $t('subscribe_channel') }}</a>

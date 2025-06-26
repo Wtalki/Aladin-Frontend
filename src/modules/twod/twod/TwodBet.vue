@@ -56,7 +56,7 @@
                                 class="w-full bg-gray-500 text-white py-2 rounded-lg font-semibold">{{ $t('enter')
                                 }}</button>
                             <button @click="handleReversedBet"
-                                class="w-full !bg-primary text-white py-2 rounded-lg font-semibold">{{ $t('add_r')
+                                class="w-full [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] text-white py-2 rounded-lg font-semibold">{{ $t('add_r')
                                 }}</button>
                             <button @click="handleQuickModal"
                                 class="w-full !bg-blue-500 text-white py-2 rounded-lg font-semibold">{{

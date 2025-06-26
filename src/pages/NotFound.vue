@@ -5,6 +5,6 @@
         <p class="mb-5 text-md text-light">
             ဝမ်းနည်းပါတယ်၊အဲဒီစာမျက်နှာကိုရှာမတွေ့ပါဘူး။ပင်မစာမျက်နှာတွင်စူးစမ်းလေ့လာစရာများစွာကိုတွေ့ရပါမည်။</p>
         <router-link to="/"
-            class="text-white !bg-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center">ပင်မစာမျက်နှာသို့ပြန်သွားရန်</router-link>
+            class="text-white [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] font-medium rounded-lg text-sm px-5 py-2.5 text-center">ပင်မစာမျက်နှာသို့ပြန်သွားရန်</router-link>
     </section>
 </template>

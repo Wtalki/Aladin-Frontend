@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center justify-center min-h-screen">
-        <div class="!bg-primary min-h-screen flex flex-col items-center justify-center appWidth">
+        <div class=" min-h-screen flex flex-col items-center justify-center appWidth ![background:linear-gradient(to_bottom,#01adec_60%,#0260bf_120%,#0260bf_100%)]">
             <div class="flex justify-start items-start w-full mt-2 ps-4">
                 <router-link to="/"
                     class="hover:bg-gray-200 border border-[#808080] p-2 rounded-2xl shadow-sm transition-all duration-200">
@@ -11,19 +11,19 @@
                 <div class="flex justify-center mb-6">
                     <img :src="require('@/assets/icons/logo.png')" width="150" alt="Logo" />
                 </div>
-                <h1 class="text-4xl font-bold text-gold mb-2">{{ $t('login') }}</h1>
-                <p class="text-gray-2 mb-6">{{ $t('enter_login_info') }}</p>
+                <h1 class="text-4xl font-bold text-white text-center mb-2">{{ $t('login') }}</h1>
+                <p class="text-white mb-6 text-center">{{ $t('enter_login_info') }}</p>
 
                 <form @submit.prevent="formLogin">
                     <div class="mb-4">
-                        <label class="block text-gray-100 mb-2"> {{ $t('phone') }} </label>
+                        <!-- <label class="block text-gray-100 mb-2"> {{ $t('phone') }} </label> -->
                         <input v-model="phone" @input="validatePhone"
                             class="w-full px-4 py-3 text-black rounded-full bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-success"
                             :placeholder="$t('enter_phone')" type="tel" />
                     </div>
 
                     <div class="mb-4 relative">
-                        <label class="block text-gray-100 mb-2"> {{ $t('password') }} </label>
+                        <!-- <label class="block text-gray-100 mb-2"> {{ $t('password') }} </label> -->
                         <input v-model="pin" @input="validatePin" :type="showPassword ? 'text' : 'password'"
                             class="w-full px-4 py-3 text-black rounded-full bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-success"
                             :placeholder="$t('enter_password')" />

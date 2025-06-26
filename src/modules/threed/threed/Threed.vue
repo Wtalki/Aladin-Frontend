@@ -36,7 +36,7 @@
         </section>
 
         <section class="w-full mt-6 space-y-5 !pb-32">
-            <div v-for="result in results" :key="result.id" class="!bg-primary text-light p-4 rounded-lg">
+            <div v-for="result in results" :key="result.id" class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] text-light p-4 rounded-lg">
                 <div class="flex justify-between items-center mt-3">
                     <div class="flex flex-col items-center">
                         <h1 class="text-lg font-semibold">{{ $t('date') }}</h1>

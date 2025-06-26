@@ -1,6 +1,6 @@
 <template>
     <div v-if="!showRouterView" class="relative mx-auto appWidth">
-        <div class="absolute top-3 right-3 rounded-full px-2 py-1 !bg-primary cursor-pointer" @click="skipCountdown">{{
+        <div class="absolute top-3 right-3 rounded-full px-2 py-1 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] cursor-pointer" @click="skipCountdown">{{
             $t('Skip') }} {{ countdown }}</div>
         <img src="/banners/banner1.jpg" class="w-full" alt="Wallpaper" />
     </div>

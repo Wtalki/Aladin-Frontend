@@ -13,7 +13,7 @@
 
                 <transition name="fade">
                     <div v-if="activeIndex === index"
-                        class="border border-gray-700 p-4 mx-2 rounded-lg mt-2 !bg-primary">
+                        class="border border-gray-700 p-4 mx-2 rounded-lg mt-2 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)]">
                         <div v-for="(section, secIndex) in item.content" :key="secIndex" class="mb-4">
                             <h6 class="text-gold font-semibold">{{ section.title }}</h6>
                             <ul class="list-disc ml-5 space-y-2 text-light">
