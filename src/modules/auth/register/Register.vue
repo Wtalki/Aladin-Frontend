@@ -1,11 +1,6 @@
 <template>
-<<<<<<< HEAD
     <div class="bg-primary min-h-screen flex flex-col mx-auto items-center justify-between appWidth">
         <div class="flex justify-start items-start w-full mt-2 ps-4">
-=======
-    <div class="!bg-primary min-h-screen flex flex-col mx-auto items-center justify-between appWidth">
-        <!-- <div class="flex justify-start items-start w-full mt-2 ps-4">
->>>>>>> 7e97248 (auth design)
                 <router-link to="/"
                     class="hover:bg-gray-200 border border-[#b6b6b6] p-2 rounded-2xl shadow-sm transition-all duration-200">
                     <img src="../../../assets/images/svg/leftarrow1.svg" width="25" alt="" />
@@ -16,14 +11,11 @@
                 style="border-bottom-left-radius: 40%; border-bottom-right-radius: 40%;">
                 <img :src="require('@/assets/icons/logo.png')" width="150" alt="Logo" />
             </div>
-<<<<<<< HEAD
         <div class="w-full max-w mb-14 space-y-4">
             <div class="flex justify-center bg-light p-5"
                 style="border-bottom-left-radius: 40%; border-bottom-right-radius: 40%;">
                 <img :src="require('@/assets/icons/logo.png')" width="150" alt="Logo" />
             </div>
-=======
->>>>>>> 7e97248 (auth design)
 
             <h1 class="text-3xl font-bold text-gold text-center">{{ $t('register') }}</h1>
             <p class="text-light text-center">{{ $t('enter_personal_info') }}</p>
