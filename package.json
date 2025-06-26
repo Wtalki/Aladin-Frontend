@@ -4,7 +4,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build && npm run apk",
-    "apk": "copy android\\app\\build\\outputs\\apk\\debug\\app-debug.apk public\\aladinslots.apk",
+    "apk": "npx cap copy android && cd android && ./gradlew assembleRelease && mv app/build/outputs/apk/release/app-release.apk ../public/bossxbet.apk",
     "lint": "eslint --ext .js,.vue .",
     "format": "prettier .  --write",
     "lint-fix": "eslint --fix --ext .js,.vue .",
