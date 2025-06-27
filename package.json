@@ -12,7 +12,7 @@
     "lint-fix": "eslint --fix --ext .js,.vue .",
     "format": "prettier . --write",
     "watch": "tailwindcss -i ./src/assets/index.css -o ./src/assets/output.css --watch"
-  },
+    },
   "dependencies": {
     "@capacitor/android": "^7.4.0",
     "@capacitor/assets": "^3.0.5",
