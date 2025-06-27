@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && npm run apk",
-    "apk": "npx cap copy android && cd android && ./gradlew assembleRelease && mv app/build/outputs/apk/release/app-release.apk ../public/bossxbet.apk",
+    "vuebuild": "vue-cli-service build",
+    "upload": "scp -r dist/* root@159.65.1.193:/var/www/aladinslots.com/public",
+    "copy:android": "npx cap copy android",
+    "build:apk": "cd android && ./gradlew assembleRelease && mv app/build/outputs/apk/release/app-release.apk ../public/bossxbet.apk",
+    "apk": "npm run copy:android && npm run build:apk",
+    "build": "npm run vuebuild && npm run upload && npm run apk",
     "lint": "eslint --ext .js,.vue .",
-    "format": "prettier .  --write",
     "lint-fix": "eslint --fix --ext .js,.vue .",
+    "format": "prettier . --write",
     "watch": "tailwindcss -i ./src/assets/index.css -o ./src/assets/output.css --watch"
-  },
+    },
   "dependencies": {
     "@capacitor/android": "^7.4.0",
     "@capacitor/assets": "^3.0.5",
