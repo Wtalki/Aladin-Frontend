@@ -4,9 +4,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "vuebuild": "vue-cli-service build",
-    "upload": "scp -r dist/* root@159.65.1.193:/var/www/projects/aladinslots.com/public",
+    "upload": "scp -r dist/* root@159.65.1.193:/var/www/projects/frontend/public",
     "copy:android": "npx cap copy android",
-    "build:apk": "cd android && ./gradlew assembleRelease && mv app/build/outputs/apk/release/app-release.apk ../public/bossxbet.apk",
+    "build:apk": "cd android && gradlew.bat assembleRelease && move app\\build\\outputs\\apk\\release\\app-release.apk ..\\public\\bossxbet.apk",
     "apk": "npm run copy:android && npm run build:apk",
     "build": "npm run vuebuild && npm run upload && npm run apk",
     "lint": "eslint --ext .js,.vue .",
