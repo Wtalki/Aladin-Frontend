@@ -16,6 +16,24 @@ import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
 import EventBus from '@/libs/AppEventBus'
 
+import { Capacitor } from '@capacitor/core'
+import { LiveUpdates } from '@capacitor/live-updates'
+
+if (Capacitor.isNativePlatform() && LiveUpdates?.sync) {
+  LiveUpdates.sync().then((result) => {
+    if (result.active) {
+      console.log('✅ Update applied')
+      location.reload()
+    } else {
+      console.log('🔄 No update found')
+    }
+  }).catch(err => {
+    console.warn('LiveUpdate Error:', err)
+  })
+} else {
+  console.log('⚠️ LiveUpdates plugin not available (web browser mode)')
+}
+
 const showRouterView = ref(process.env.VUE_APP_ENV == 'production' ? false : true)
 const countdown = ref(3)
 let countdownTimer = null

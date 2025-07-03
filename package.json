@@ -4,16 +4,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "vuebuild": "vue-cli-service build",
-    "upload": "scp -r dist/* root@159.65.1.193:/var/www/projects/frontend/public",
     "copy:android": "npx cap copy android",
-    "build:apk": "cd android && gradlew.bat assembleRelease && move app\\build\\outputs\\apk\\release\\app-release.apk ..\\public\\bossxbet.apk",
-    "apk": "npm run copy:android && npm run build:apk",
-    "build": "npm run vuebuild && npm run upload && npm run apk",
+    "livezip": "cd dist && zip -r ../public/live.zip .",
+    "apk": "npx cap copy android && cd android && ./gradlew assembleRelease && mv app/build/outputs/apk/release/app-release.apk ../public/aladinslots.apk",
+    "build": "npm run vuebuild  && npm run apk",
     "lint": "eslint --ext .js,.vue .",
     "lint-fix": "eslint --fix --ext .js,.vue .",
     "format": "prettier . --write",
     "watch": "tailwindcss -i ./src/assets/index.css -o ./src/assets/output.css --watch"
-    },
+  },
   "dependencies": {
     "@capacitor/android": "^7.4.0",
     "@capacitor/assets": "^3.0.5",
