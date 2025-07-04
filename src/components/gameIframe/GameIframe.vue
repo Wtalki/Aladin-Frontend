@@ -28,8 +28,8 @@ export default {
   align-items: center;
 }
 .game-frame {
-  width: 95%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
   background: rgb(0, 0, 0);
   box-shadow: 0 0 10px black;

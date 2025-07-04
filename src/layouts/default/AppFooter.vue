@@ -112,7 +112,7 @@ export default {
     position: fixed;
     top: 97%;
     left: 50%;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .checkbox:before {

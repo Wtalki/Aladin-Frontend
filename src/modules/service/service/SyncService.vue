@@ -9,7 +9,7 @@
 
         <div class="w-100">
             <div v-if="tab == 'tab1'" class="mt-4 flex flex-col items-center justify-center">
-                <p class="text-lg text-center text-gold">{{ $t('service_description') }}</p>
+                <p class="text-lg text-center text-black">{{ $t('service_description') }}</p>
 
                 <div v-for="(contact, index) in contacts" :key="index"
                     class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] !border-gold shadow-md">
@@ -31,10 +31,10 @@
                     </div>
                 </div>
 
-                <div v-if="loading" class="mt-6 text-lg text-center text-gold">Loading contacts...</div>
+                <div v-if="loading" class="mt-6 text-lg text-center text-black">Loading contacts...</div>
             </div>
             <div v-if="tab == 'tab2'" class="mt-4 flex flex-col items-center justify-center">
-                <p class="text-lg text-center text-gold">{{ $t('official_channel_info') }}</p>
+                <p class="text-lg text-center text-black">{{ $t('official_channel_info') }}</p>
 
                 <div
                     class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] !border-gold shadow-md">
