@@ -2,7 +2,7 @@
   <div class="p-2 grid grid-cols-2 gap-2">
     <div v-for="(category, n) in categoryLists" :key="n">
       <router-link to="/twod" v-if="category.category_name == '2D'"
-        class="[background:linear-gradient(to_bottom,#01adec36_70%,#0260bfab_150%,#0260bf00_100%)] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer">
+        class="[background:linear-gradient(to_bottom,#33e9ff57_70%,#0260bfab_150%,#0260bf00_100%)] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer">
           <div>
           <h2 class="font-semibold tracking-wider text-md text-black">2D</h2>
           <p class="text-sm text-gray-700">{{ formattedMoney }}</p>
@@ -11,15 +11,15 @@
       </router-link>
 
       <router-link to="/threed" v-else-if="category.category_name == '3D'"
-        class="[background:linear-gradient(to_bottom,#01adec36_70%,#0260bfab_150%,#0260bf00_100%)] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer">
+        class="[background:linear-gradient(to_bottom,#33e9ff57_70%,#0260bfab_150%,#0260bf00_100%)] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer">
         <div>
           <h2 class="font-semibold tracking-wider text-md text-black">3D</h2>
-          <p class="text-sm text-gray-700">{{ formattedMoney }}</p>
+          <p class="text-sm text-gray-700">{{ formattedMoney }}Ks</p>
         </div>
         <img :src="category.image" class="w-14 h-14 object-cover" />
       </router-link>
 
-      <div v-else class="[background:linear-gradient(to_bottom,#01adec36_70%,#0260bfab_150%,#0260bf00_100%)] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer"
+      <div v-else class="[background:linear-gradient(to_bottom,#33e9ff57_70%,#0260bfab_150%,#0260bf00_100%)] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer"
         @click="showGame(category.category_name)">
         <div>
           <h2 class="font-semibold tracking-wider text-md text-black" v-if="category.category_name =='SLOT'">Slots</h2>
@@ -29,7 +29,7 @@
           <h2 class="font-semibold tracking-wider text-md text-black" v-if="category.category_name =='POKER'">Poker</h2>
           <h2 class="font-semibold tracking-wider text-md text-black" v-if="category.category_name =='SPORT_BOOK'">Sport Book</h2>
           <h2 class="font-semibold tracking-wider text-md text-black" v-if="category.category_name =='VIRTUAL_SPORT'">Virtual Sport</h2>
-          <p class="text-sm text-gray-700">{{ formattedMoney }}</p>
+          <p class="text-sm text-gray-700">{{ category.randomMoney.toLocaleString() }} KS</p>
         </div>
         <img :src="category.image" class="w-14 h-14 object-cover" />
       </div>
