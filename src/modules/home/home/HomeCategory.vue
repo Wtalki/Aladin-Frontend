@@ -2,7 +2,7 @@
   <div class="p-2 grid grid-cols-2 gap-2">
     <div v-for="(category, n) in categoryLists" :key="n">
       <router-link to="/twod" v-if="category.category_name == '2D'"
-        class="bg-[#29a7f5a1] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer">
+        class="bg-[#039bd3c4] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer">
           <div>
           <h2 class="font-semibold tracking-wider text-md text-white">2D</h2>
           <p class="text-[10px] text-gray-200">{{ formattedMoney }}</p>
@@ -11,7 +11,7 @@
       </router-link>
 
       <router-link to="/threed" v-else-if="category.category_name == '3D'"
-        class="bg-[#29a7f5a1] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer">
+        class="bg-[#039bd3c4] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer">
         <div>
           <h2 class="font-semibold tracking-wider text-md text-white">3D</h2>
           <p class="text-[10px] text-gray-200">{{ formattedMoney }}Ks</p>
@@ -19,7 +19,7 @@
         <img :src="category.image" class="w-14 h-14 object-cover" />
       </router-link>
 
-      <div v-else class=" bg-[#29a7f5a1] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer"
+      <div v-else class=" bg-[#039bd3c4] text-light rounded-lg p-2 flex justify-between items-center cursor-pointer"
         @click="showGame(category.category_name)">
         <div>
           <h2 class="font-semibold tracking-wider text-[12px] text-white" v-if="category.category_name =='SLOT'">Slots</h2>
