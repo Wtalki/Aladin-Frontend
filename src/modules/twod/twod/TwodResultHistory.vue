@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
     <main v-for="(data, index) in twodResults" :key="index" class="rounded-lg my-3 p-3 bg-primary">
-=======
-    <main v-for="(data, index) in twodResults" :key="index" class="rounded-lg my-3 p-3 [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)]">
->>>>>>> 032a9fb (change color)
         <h5 class="text-light">{{ data?.date }}</h5>
         <section class="w-full mt-4">
             <div class="rounded-t-lg px-3 py-2">

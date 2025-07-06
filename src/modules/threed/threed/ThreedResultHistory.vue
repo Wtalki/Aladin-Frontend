@@ -1,10 +1,6 @@
 <template>
     <section class="flex flex-col items-center p-3 min-h-screen space-y-4 !pb-32">
-<<<<<<< HEAD
         <div v-for="result in results" :key="result.id" class="bg-primary w-full text-light p-4 rounded-lg">
-=======
-        <div v-for="result in results" :key="result.id" class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] w-full text-light p-4 rounded-lg">
->>>>>>> 032a9fb (change color)
             <div class="flex justify-between items-center mt-3">
                 <div class="flex flex-col items-center">
                     <h1 class="text-lg font-semibold">{{ $t('date') }}</h1>

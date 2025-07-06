@@ -3,11 +3,7 @@
         <Loading :loading="loading" v-if="loading" />
         <div v-else class="p-3 space-y-3 !pb-20 min-h-screen">
             <div v-for="(bet, index) in bets" :key="index"
-<<<<<<< HEAD
                 class="bg-primary p-4 rounded-lg shadow-md mb-3 cursor-pointer"
-=======
-                class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] p-4 rounded-lg shadow-md mb-3 cursor-pointer"
->>>>>>> 032a9fb (change color)
                 @click="showBetDetails(bet.betting_code)">
                 <div class="my-2">
                     <span class="text-gold text-bold">{{ $t('betting_id') }}:</span>
