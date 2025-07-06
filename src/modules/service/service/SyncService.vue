@@ -51,7 +51,7 @@
                 <div
                     class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 bg-primary !border-gold shadow-md">
                     <img src="@/assets/images/webp/telegram.webp" width="30" alt="Telegram" />
-                    <a href="https://www.youtube.com/@LottoMM2D" target="blank"
+                    <a href="https://t.me/aladinofficalchannel" target="blank"
                         class="bg-black p-2 rounded-lg cursor-pointer">Telegram Channel</a>
                 </div>
 
