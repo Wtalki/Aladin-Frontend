@@ -5,7 +5,7 @@
             <h2 class="text-xl font-bold mt-2 text-primary">{{ user?.name }}</h2>
             <span class="text-md font-semibold mt-2 text-primary">{{ user?.phone }}</span>
         </div>
-        <div class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] rounded-t-2xl p-4 mt-[-15px]">
+        <div class="bg-primary rounded-t-2xl p-4 mt-[-15px]">
             <router-link to="/editProfile"
                 class="flex items-center justify-between mb-4 !hover:bg-gray-500 transaction-all durition-100 p-1 rounded-lg cursor-pointer">
                 <div class="flex items-center">
@@ -52,7 +52,7 @@
 
                 <transition name="fade">
                     <div v-if="activeIndex === index"
-                        class="flex flex-col space-y-4 text-lg border border-gray-700 p-4 rounded-lg -mt-2 mb-3 text-light [background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)]">
+                        class="flex flex-col space-y-4 text-lg border border-gray-700 p-4 rounded-lg -mt-2 mb-3 text-light bg-primary">
                         <router-link to="twod/betting_records">2D {{ $t('betting_records') }}</router-link>
                         <router-link to="threed/betting_records">3D {{ $t('betting_records') }}</router-link>
                     </div>

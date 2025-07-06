@@ -1,5 +1,5 @@
 <template>
-    <nav class="sticky z-10 h-20  appWidth mx-auto top-0 flex flex-row px-3 justify-between items-center [background:linear-gradient(to_right,#01adec_60%,#0260bf_120%,#0260bf_100%)]">
+    <nav class="sticky z-10 h-20  appWidth mx-auto top-0 flex flex-row px-3 justify-between items-center bg-primary">
         <Button type="link" route="/" class="flex items-center space-x-2">
             <img :src="require('@/assets/icons/logo.png')" class="w-16" alt="Logo" />
         </Button>

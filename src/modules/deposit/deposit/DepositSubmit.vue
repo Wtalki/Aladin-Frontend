@@ -9,7 +9,7 @@
 
             <span class="font-semibold text-primary">{{ $t('choose_deposit_account') }}</span>
             <Card v-for="(account, index) in paymentAccounts" :key="index"
-                :class="selectedBankAccount === account.id ? '!bg-secondary border border-3 border-light' : '[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)]'"
+                :class="selectedBankAccount === account.id ? '!bg-secondary border border-3 border-light' : 'bg-primary'"
                 class="!p-3 cursor-pointer flex space-x-2 items-center" @click="handleSelectBankAccount(account)">
                 <div class="flex flex-col font-semibold space-y-3 text-primary">
                     <span>{{ $t('account_name') }} : {{ account.acc_name }}</span>

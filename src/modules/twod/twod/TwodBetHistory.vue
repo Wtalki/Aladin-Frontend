@@ -5,9 +5,9 @@
         </div>
         <div v-else class="p-3 space-y-3 h-screen overflow-y-scroll !pb-20">
             <div class="flex space-x-2">
-                <input type="date" v-model="selectedDate" class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] text-white p-2 rounded w-full"
+                <input type="date" v-model="selectedDate" class="bg-primary text-white p-2 rounded w-full"
                     @change="getBets" />
-                <select v-model="selectedBetTime" class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] text-white p-2 rounded w-full" @change="getBets">
+                <select v-model="selectedBetTime" class="bg-primary text-white p-2 rounded w-full" @change="getBets">
                     <option value="all">{{ $t('all_betting_times') }}</option>
                     <option value="early_morning">{{ $t('morning') }} (11:00PM)</option>
                     <option value="morning">{{ $t('morning') }} (12:01PM)</option>
@@ -16,7 +16,7 @@
                 </select>
             </div>
             <div v-for="(bet, index) in bets" :key="index"
-                class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] p-4 rounded-lg shadow-md mb-3 cursor-pointer"
+                class="bg-primary p-4 rounded-lg shadow-md mb-3 cursor-pointer"
                 @click="showBetDetails(bet.betting_code)">
                 <div class="my-2">
                     <span class="text-gold font-bold">{{ $t('betting_id') }}:</span>

@@ -1,5 +1,5 @@
 <template>
-    <div class="[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)] min-h-screen flex flex-col mx-auto items-center justify-between appWidth">
+    <div class="bg-primary min-h-screen flex flex-col mx-auto items-center justify-between appWidth">
         <div class="flex justify-start items-start w-full mt-2 ps-4">
                 <router-link to="/"
                     class="hover:bg-gray-200 border border-[#b6b6b6] p-2 rounded-2xl shadow-sm transition-all duration-200">

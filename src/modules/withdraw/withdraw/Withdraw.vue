@@ -14,7 +14,7 @@
         </div>
         <div v-else class="space-y-3">
             <Card class="rounded-md cursor-pointer shadow-md bg-white !p-2 flex justify-between items-center space-x-5"
-                :class="selectedAccount === account?.id ? '!bg-secondary border border-3 border-light' : '[background:linear-gradient(to_bottom,#01adec_70%,#0260bf_150%,#0260bf_100%)]'"
+                :class="selectedAccount === account?.id ? '!bg-secondary border border-3 border-light' : 'bg-primary'"
                 v-for="(account, index) in accounts" :key="index" @click="selectedAccount = account?.id">
                 <div class="flex justify-center space-x-2 font-semibold items-center">
                     <img :src="account.banktype.image" :alt="account.type?.toUpperCase()"
