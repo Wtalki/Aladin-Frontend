@@ -12,7 +12,7 @@
                 <p class="text-lg text-center text-black">{{ $t('service_description') }}</p>
 
                 <div v-for="(contact, index) in contacts" :key="index"
-                    class="border-2 rounded p-3 flex justify-center items-center w-[350px] mt-4 bg-primary !border-gold shadow-md">
+                    class="border-2 rounded p-3 flex justify-center items-center w-[350px] mt-4 bg-primary !border-primary shadow-md">
                     <a v-if="contact.phone" :href="'tel:' + contact.phone"
                         class="text-xl font-bold tracking-wider text-light">{{ contact.phone }}</a>
                     <div class="flex items-center gap-2">
@@ -37,19 +37,19 @@
                 <p class="text-lg text-center text-black">{{ $t('official_channel_info') }}</p>
 
                 <div
-                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 bg-primary !border-gold shadow-md">
+                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 bg-primary !border-primary shadow-md">
                     <img src="@/assets/images/webp/facebook.webp" width="30" alt="Facebook" />
                     <a href="https://www.facebook.com/share/1G6f1VKyLY/" target="blank"
-                        class="bg-gold p-2 rounded-lg cursor-pointer">{{ $t('follow_page') }}</a>
+                        class="bg-primary p-2 rounded-lg cursor-pointer">{{ $t('follow_page') }}</a>
                 </div>
                 <div
-                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 bg-primary !border-gold shadow-md">
+                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 bg-primary !border-primary shadow-md">
                     <img src="@/assets/images/webp/youtube.png" width="30" alt="Telegram" />
                     <a href="https://www.youtube.com/@LottoMM2D" target="blank"
                         class="bg-danger p-2 rounded-lg cursor-pointer">{{ $t('subscribe_channel') }}</a>
                 </div>
                 <div
-                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 bg-primary !border-gold shadow-md">
+                    class="border-2 rounded p-3 flex justify-between items-center w-[350px] mt-4 bg-primary !border-primary shadow-md">
                     <img src="@/assets/images/webp/telegram.webp" width="30" alt="Telegram" />
                     <a href="https://t.me/aladinofficalchannel" target="blank"
                         class="bg-black p-2 rounded-lg cursor-pointer">Telegram Channel</a>
