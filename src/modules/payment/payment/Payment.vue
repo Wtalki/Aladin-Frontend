@@ -1,6 +1,6 @@
 <template>
     <section class="mx-auto space-y-5 p-5 !pb-32 w-full">
-        <WalletCard />
+        <!-- <WalletCard /> -->
         <div class="bg-primary p-5 rounded-md shadow-md flex justify-between items-center">
             <Button type="link" route="/deposit"
                 class="flex flex-col items-center text-sm text-light font-semibold cursor-pointer">
@@ -51,13 +51,13 @@
 </template>
 
 <script>
-import WalletCard from '@/components/molecules/WalletCard.vue'
+// import WalletCard from '@/components/molecules/WalletCard.vue'
 import Button from '@/components/atoms/Button.vue'
 
 export default {
     components: {
         Button,
-        WalletCard
+        // WalletCard
     }
 }
 </script>
