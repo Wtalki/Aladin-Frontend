@@ -10,6 +10,7 @@ import paymentRoutes from '@/modules/payment/paymentRoute'
 import depositRoutes from '@/modules/deposit/depositRoute'
 import withdrawRoutes from '@/modules/withdraw/withdrawRoute'
 import serviceRoutes from '@/modules/service/serviceRoute'
+import promoRoutes from '@/modules/promo/promoRoute'
 
 const routes = [
     ...authRoutes,
@@ -23,6 +24,7 @@ const routes = [
     ...depositRoutes,
     ...withdrawRoutes,
     ...serviceRoutes,
+    ...promoRoutes,
     {
         path: '/error-404',
         name: 'error404',

@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed z-50 h-24 -bottom-2 appWidth overflow-hidden">
+    <div class="fixed z-50 h-24 -bottom-6 appWidth overflow-hidden">
         <div class="grid grid-cols-5 h-full bg-primary">
             <Button class="inline-flex flex-col items-center justify-center px-5 hover:bg-secondary group" type="link"
                 route="/">
@@ -11,9 +11,14 @@
                 <WalletIcon class="mb-2 !text-white" />
                 <span class="text-xs text-center line-clamp-1 w-20 !text-light">{{ $t('Wallet') }}</span>
             </Button>
-            <Button class="flex items-center justify-center">
-                <button
-                    class="inline-flex items-center justify-center !w-14 !h-14 font-medium !text-light rounded-full hover:bg-yellow-600 group focus:ring-4 focus:ring-blue-300 focus:outline-none"></button>
+            <Button type="link" route="/promo"
+                class="inline-flex flex-col items-center justify-center px-5 hover:bg-secondary group">
+                <svg fill="#ffffff" class="!w-5 !h-5 mb-2 !text-white" viewBox="0 0 32 32" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#ffffff">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier"> <g transform="matrix(1,0,0,1,-96,-240)"> <g transform="matrix(0.294118,-0.509427,0.314918,0.181818,-7.8734,270.952)"> <path d="M111.879,249.995C108.418,251.567 105.129,252.095 102.105,251.032C101.604,250.83 101.074,251.013 100.668,251.526C100.262,252.04 100.024,252.828 100.024,253.662C100,255.359 100,257.318 100,258.785C99.999,260.094 100.569,261.222 101.361,261.482C105.813,262.874 110.497,262.861 115.406,261.49" style="fill:#ffffff;"/> </g> <g transform="matrix(0.529412,0,0,1,62.0588,-2)"> <path d="M117,249.236C117,248.543 116.322,247.899 115.208,247.535C114.095,247.17 112.704,247.137 111.533,247.447C105.954,248.924 98.111,251 98.111,251L98.111,261C98.111,261 105.954,263.076 111.533,264.553C112.704,264.863 114.095,264.83 115.208,264.465C116.322,264.101 117,263.457 117,262.764C117,259.04 117,252.96 117,249.236Z" style="fill:#ffffff;"/> </g> <g transform="matrix(0.823529,0,0,0.909091,17.6471,21.7273)"> <path d="M117,250L102.429,250C101.087,250 100,250.985 100,252.2C100,254.117 100,256.883 100,258.8C100,260.015 101.087,261 102.429,261C107.126,261 117,261 117,261L117,250Z" style="fill:#ffffff;"/> </g> <path d="M113.764,248L102,248C100.343,248 99,249.343 99,251L99,257C99,258.657 100.343,260 102,260L102.556,260C102.088,261.518 101.431,262.844 100.488,263.889C100.063,264.339 99.871,264.942 99.955,265.541C100.039,266.141 100.393,266.669 100.915,266.976C101.447,267.299 102.069,267.658 102.535,267.927C103.358,268.403 104.403,268.233 105.033,267.521L105.037,267.517C106.863,265.411 108.3,262.92 109.356,260.05C109.362,260.034 109.368,260.017 109.373,260L113.723,260L120.457,264.04C121.383,264.596 122.538,264.611 123.478,264.078C124.419,263.546 125,262.548 125,261.468L125,247.236C125,246.196 124.462,245.231 123.577,244.684C122.693,244.137 121.588,244.088 120.658,244.553L113.764,248ZM104.639,260C104.07,262.075 103.211,263.866 101.944,265.261L101.948,265.263C102.469,265.58 103.078,265.932 103.535,266.196L103.535,266.196L103.535,266.196C105.067,264.428 106.295,262.359 107.234,260L104.639,260ZM115,258.434L115,249.618C115,249.618 121.553,246.342 121.553,246.342C121.863,246.187 122.231,246.203 122.526,246.385C122.821,246.568 123,246.889 123,247.236L123,261.468C123,261.828 122.806,262.16 122.493,262.338C122.179,262.515 121.794,262.51 121.486,262.325L115,258.434ZM113,250L113,258C113,258 102,258 102,258C101.448,258 101,257.552 101,257L101,251C101,250.448 101.448,250 102,250L113,250Z" style="fill:#ffffff;"/> </g> </g>
+                    </svg>
+                <span class="text-xs !text-light">{{ $t('Promo') }}</span>
             </Button>
             <Button type="link" route="/service"
                 class="inline-flex flex-col items-center justify-center px-5 hover:bg-secondary group">
@@ -35,18 +40,6 @@
             </Button>
         </div>
     </div>
-    <nav class="menu">
-        <input type="checkbox" name="" class="checkbox" />
-        <div class="checkbox-list">
-            <router-link to="/twod" class="nav-item" href="#"><img :src="require('@/assets/images/svg/2D.svg')"
-                    class="!w-14" /><span class="tab-title">2D</span></router-link>
-            <router-link to="/threed" class="nav-item" href="#"><img :src="require('@/assets/images/svg/3D.svg')"
-                    class="!w-14" /><span class="tab-title">3D</span></router-link>
-            <router-link to="/deposit" class="nav-item" href="#"><img
-                    :src="require('@/assets/icons/circle_deposit.png')" class="!w-14" /><span
-                    class="tab-title">Deposit</span></router-link>
-        </div>
-    </nav>
 </template>
 
 <script>
@@ -59,184 +52,5 @@ export default {
 }
 </script>
 <style scoped>
-.menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    padding: 0 15px 15px;
-    margin: 10px;
-}
 
-.nav-item {
-    position: relative;
-}
-
-.tab-title {
-    display: none;
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 12px;
-    background: #222;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    width: max-content;
-    text-transform: capitalize;
-}
-
-.tab-title:before {
-    content: '';
-    position: absolute;
-    border-color: #222 transparent transparent transparent;
-    border-style: solid;
-    border-width: 6px;
-    width: 0px;
-    height: 0px;
-    bottom: -12px;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.nav-item:hover .tab-title {
-    display: block;
-}
-
-.checkbox {
-    background-color: #fff;
-    cursor: pointer;
-    width: 0;
-    height: 0;
-    position: fixed;
-    top: 97%;
-    left: 50%;
-    z-index: 100;
-}
-
-.checkbox:before {
-    content: '';
-    width: 65px;
-    aspect-ratio: 1;
-    transform: translate(-50%, -50%);
-    top: -30px;
-    left: 0;
-    position: absolute;
-    border-radius: 100%;
-    background: linear-gradient(180deg, #0260bf 0%, #0260bfe0 80%, #0c5eb1 100%);
-    transition: all 0.2s linear;
-    border: 4px solid #fff;
-}
-
-.checkbox:after {
-    content: '+';
-    position: absolute;
-    font-size: 4em;
-    color: #fff;
-    top: -30px;
-    left: 0;
-    transform: translate(-50%, -50%);
-    transition: all 0.1s linear;
-}
-
-.checkbox:checked+.checkbox-list {
-    top: 80%;
-    transform: rotate(0deg);
-}
-
-.checkbox:checked+.checkbox-list .nav-item {
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    aspect-ratio: 1;
-    position: fixed;
-    left: 0;
-    transform: translate(-50%, -15px);
-}
-
-.checkbox:checked+.checkbox-list .nav-item:hover .tab-title {
-    display: block !important;
-}
-
-.checkbox:checked+.checkbox-list .nav-item>i {
-    color: #fff;
-    display: block;
-    transition: all 0.5s linear;
-}
-
-.checkbox:checked+.checkbox-list .nav-item:nth-child(1) {
-    background: linear-gradient(180deg, #0260bf 0%, #0260bfe0 80%, #0c5eb1 100%);
-    top: -80%;
-    left: -90px;
-}
-
-.checkbox:checked+.checkbox-list .nav-item:nth-child(2) {
-    background: linear-gradient(180deg, #0260bf 0%, #0260bfe0 80%, #0c5eb1 100%);
-    left: 0;
-    top: -40px;
-}
-
-.checkbox:checked+.checkbox-list .nav-item:nth-child(3) {
-    background: linear-gradient(180deg, #0260bf 0%, #0260bfe0 80%, #0c5eb1 100%);
-    top: 0px;
-    left: 90px;
-}
-
-.checkbox:checked:before {
-    background: linear-gradient(180deg, #0260bf 0%, #0260bfe0 80%, #0c5eb1 100%);
-    box-shadow: 0 0 10px #c7c7c7;
-}
-
-.checkbox:checked:after {
-    transform: translate(-50%, -50%) rotate(45deg);
-    /* color: red; */
-}
-
-.checkbox-list {
-    position: fixed;
-    top: 92.2%;
-    display: block;
-    z-index: 1;
-    transform: rotate(-90deg) translate(0, -50%);
-    transition: all 0.1s linear;
-}
-
-.checkbox-list .nav-item {
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    aspect-ratio: 1;
-    position: absolute;
-    transform: translate(15px, -50%);
-    transition: all 0.2s linear;
-}
-
-.checkbox-list .nav-item .tab-title {
-    display: none;
-}
-
-.checkbox-list .nav-item>i {
-    color: #fff;
-    display: block;
-}
-
-.checkbox-list .nav-item:nth-child(1) {
-    background: linear-gradient(180deg, #0260bf 0%, #0260bfe0 80%, #0c5eb1 100%);
-    left: -72px;
-}
-
-.checkbox-list .nav-item:nth-child(2) {
-    background: linear-gradient(180deg, #0260bf 0%, #0260bfe0 80%, #0c5eb1 100%);
-    left: -68px;
-}
-
-.checkbox-list .nav-item:nth-child(3) {
-    background: linear-gradient(180deg, #0260bf 0%, #0260bfe0 80%, #0c5eb1 100%);
-    left: -64px;
-}
 </style>
