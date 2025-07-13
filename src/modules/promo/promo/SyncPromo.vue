@@ -1,13 +1,9 @@
 <template>
-    <div class="h-screen  space-y-3 p-3 appWidth">
+    <div class="h-auto  space-y-3 p-3 appWidth">
        <div class="px-2 mb-8">
-         <div class="relative w-full aspect-square overflow-hidden rounded-lg mt-2" v-for="(promo,n) in promos" :key="n" >
-            <img
-                :src="promo.image"
-                class="absolute top-0 left-0 w-full h-full object-cover"
-                alt=""
-                />
-            </div>
+         <div class="w-full shadow-lg gap-2 mt-2 rounded-2xl" v-for="n in 3" :key="n">
+            <img src="@/assets/images/webp/promo.webp" class="rounded-2xl h-[400px] w-full"  alt="">
+        </div>
        </div>
     </div>
 </template>
