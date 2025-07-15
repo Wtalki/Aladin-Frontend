@@ -1,5 +1,5 @@
 <template>
-    <div class="h-auto  space-y-3 p-3 appWidth">
+    <div class="h-screen   space-y-3 p-3 appWidth">
        <div class="px-2 mb-8">
          <div class="relative w-full aspect-square overflow-hidden rounded-lg mt-2" v-for="(promo,n) in promos" :key="n" >
             <img
