@@ -29,20 +29,29 @@
             <div v-if="tab == 'tab2'" class="mt-4 flex flex-col items-center justify-center">
                 <p class="text-lg text-center text-gray-700">{{ $t('official_channel_info') }}</p>
 
-                <div class="flex mt-2">
-                    <div class="border-2 rounded-2xl p-2 flex justify-between items-center bg-primary !border-primary shadow-md">
+                <div class="mt-4 space-y-3">
+                    <div class="flex  sm:flex-row gap-3 w-full">
+                        <div class="flex-1 flex items-center gap-3 px-4 py-2 bg-primary border border-primary rounded-2xl shadow hover:shadow-lg transition-all duration-200">
                         <img src="@/assets/images/webp/facebook.webp" width="30" alt="Facebook" />
-                        <a href="https://www.facebook.com/share/1G6f1VKyLY/" target="blank" class="bg-primary p-2 rounded-2xl cursor-pointer text-[10px]">{{ $t('follow_page') }}</a>
+                        <a href="https://www.facebook.com/share/1G6f1VKyLY/" target="_blank" class="text-sm font-medium text-white">Facebook</a>
+                        </div>
+                        <div class="flex-1 flex items-center gap-3 px-4 py-2 bg-primary border border-primary rounded-2xl shadow hover:shadow-lg transition-all duration-200">
+                        <img src="@/assets/images/svg/viber.svg" width="30" alt="Viber" />
+                        <a href="https://www.youtube.com/@LottoMM2D" target="_blank" class="text-sm font-medium text-white">Viber</a>
+                        </div>
                     </div>
-                    <div class="border-2 rounded-2xl p-2 flex justify-between items-center bg-primary !border-primary shadow-md">
-                        <img src="@/assets/images/svg/viber.svg" width="30" alt="Telegram" />
-                        <a href="https://www.youtube.com/@LottoMM2D" target="blank" class=" p-2 rounded-2xl cursor-pointer text-[10px]">Viber</a>
-                    </div>
-                    <div class="border-2 rounded-2xl p-2 flex justify-between items-center bg-primary !border-primary shadow-md">
+
+                    <div class="flex  sm:flex-row gap-3 w-full">
+                        <div class="flex-1 flex items-center gap-3 px-4 py-2 bg-primary border border-primary rounded-2xl shadow hover:shadow-lg transition-all duration-200">
+                        <img src="@/assets/images/svg/tiktok.svg" width="30" alt="TikTok" />
+                        <a href="https://www.youtube.com/@LottoMM2D" target="_blank" class="text-sm font-medium text-white">TikTok</a>
+                        </div>
+                        <div class="flex-1 flex items-center gap-3 px-4 py-2 bg-primary border border-primary rounded-2xl shadow hover:shadow-lg transition-all duration-200">
                         <img src="@/assets/images/webp/telegram.webp" width="30" alt="Telegram" />
-                        <a href="https://t.me/aladinofficalchannel" target="blank" class=" p-2 rounded-2xl cursor-pointer text-[10px]">Telegram Channel</a>
+                        <a href="https://t.me/aladinofficalchannel" target="_blank" class="text-sm font-medium text-white">Telegram Channel</a>
+                        </div>
                     </div>
-                </div>
+                    </div>
 
                 <Loading v-if="loading" />
             </div>

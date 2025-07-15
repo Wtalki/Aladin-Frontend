@@ -1,5 +1,5 @@
 <template>
-    <section class="flex justify-between items-start p-3" :class="token ? 'h-[100px]' : 'h-auto'">
+    <section class="flex justify-between items-start p-3" :class="token ? 'h-[70px]' : 'h-auto'">
         <div class="flex items-center">
             <div v-if="user" class="flex items-center">
                 <img :src="user.profile" class="!w-12 !h-12 border rounded-full mr-2" />

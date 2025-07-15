@@ -11,7 +11,7 @@
             <Card v-for="(account, index) in paymentAccounts" :key="index"
                 :class="selectedBankAccount === account.id ? '!bg-secondary border border-3 border-light' : 'bg-primary'"
                 class="!p-3 cursor-pointer flex space-x-2 items-center" @click="handleSelectBankAccount(account)">
-                <div class="flex flex-col font-semibold space-y-3 text-primary">
+                <div class="flex flex-col font-semibold space-y-3 text-gray-200">
                     <span>{{ $t('account_name') }} : {{ account.acc_name }}</span>
                     <span>{{ $t('account_number') }} : {{ account.acc_number }}</span>
                     <span>{{ $t('min_transfer_amount') }} : {{ account.min_amount }}</span>
@@ -32,20 +32,20 @@
                     </div>
                 </div>
 
-                <!-- <div class="space-y-3">
+                <div class="space-y-3">
                     <span class="font-semibold text-primary">{{ $t('transaction_id') }}</span>
                     <Input v-model="realPaymentId" type="number"
                         class="p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:border-secondary outline-none"
                         :placeholder="$t('transaction_id')" />
                     <Error :message="errors['real_payment_id']" />
-                </div> -->
+                </div>
 
-                <div class="space-y-3">
+                <!-- <div class="space-y-3">
                     <span class="font-semibold text-primary">{{ $t('payment_screenshot') }}</span>
                     <input type="file" @change="handleScreenshotUpload" accept="image/*"
                         class="block w-full text-sm cursor-pointer text-smoke file:text-smoke file:mr-4 file:p-3 bg-light rounded-lg file:border-0 file:text-sm" />
                     <Error :message="errors['screenshot']" v-if="errors['screenshot']" />
-                </div>
+                </div> -->
 
                 <button :disabled="submitLoading" type="submit"
                     class="flex items-center justify-center w-full py-2 mt-4 font-semibold text-black transition-all rounded-lg bg-gold">
