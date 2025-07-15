@@ -3,13 +3,24 @@
         delay: 2000,
         disableOnInteraction: true
     }" :pagination="{ clickable: true }">
-        <swiper-slide>
-            <img src="@/assets/images/webp/banner1.jpg"
-                class="shadow-md cursor-pointer rounded-lg object-cover w-full h-[200px]" />
+       <swiper-slide>
+        <div class="w-[100%] h-[200px] relative p-1 rounded-lg overflow-hidden">
+            <img
+            src="@/assets/images/webp/banner2.jpg"
+            class="  w-[100%] h-full object-cover shadow-md rounded-lg cursor-pointer"
+            alt="banner1"
+            />
+        </div>
         </swiper-slide>
+
         <swiper-slide>
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/ad858352683347.591968d3be907.jpg"
-                class="shadow-md cursor-pointer rounded-lg object-cover w-full h-[200px]" />
+        <div class="w-[100%] h-[200px] relative p-1  rounded-lg overflow-hidden">
+            <img
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/source/ad858352683347.591968d3be907.jpg"
+            class=" top-0 left-0 w-full h-full object-cover rounded-lg cursor-pointer shadow-md"
+            alt="banner2"
+            />
+        </div>
         </swiper-slide>
     </swiper>
 </template>
