@@ -113,19 +113,19 @@ export default {
             this.selectedMinAmount = account.min_amount
             this.selectedMaxAmount = account.max_amount
         },
-        handleScreenshotUpload(event) {
-            const file = event.target.files[0];
-            this.screenshot = file || null;
-        },
+        // handleScreenshotUpload(event) {
+        //     const file = event.target.files[0];
+        //     this.screenshot = file || null;
+        // },
         async submit() {
             this.errors = {};
 
             if (!this.paymentAmount) {
                 this.errors['amount'] = this.$t('enter_amount');
             }
-            if (!this.screenshot) {
-                this.errors['screenshot'] = this.$t('payment_screenshot');
-            }
+            // if (!this.screenshot) {
+            //     this.errors['screenshot'] = this.$t('payment_screenshot');
+            // }
             if (this.paymentAmount && this.paymentAmount < this.selectedMinAmount) {
                 this.errors['min_amount'] = `အနည်းဆုံးလွှဲနိုင်သောပမာဏမှာ ${this.selectedMinAmount} ဖြစ်သည်။`;
             }
@@ -141,8 +141,8 @@ export default {
                 formData.append('amount', this.paymentAmount);
                 formData.append('bank_type_id', this.selectedBankType);
                 formData.append('bank_account_id', this.selectedBankAccount);
-                // formData.append('real_payment_id', this.realPaymentId);
-                if (this.screenshot) formData.append('screenshot', this.screenshot);
+                formData.append('real_payment_id', this.realPaymentId);
+                // if (this.screenshot) formData.append('screenshot', this.screenshot);
 
                 const res = await this.$axios.post(`/auth/users/${this.user.id}/top-up`, formData, {
                     headers: {
