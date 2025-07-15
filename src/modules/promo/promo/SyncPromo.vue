@@ -1,9 +1,9 @@
 <template>
     <div class="h-auto  space-y-3 p-3 appWidth">
        <div class="px-2 mb-8">
-         <div class="relative w-full aspect-square overflow-hidden rounded-lg mt-2" v-for="n in 3" :key="n" >
+         <div class="relative w-full aspect-square overflow-hidden rounded-lg mt-2" v-for="(promo,n) in promos" :key="n" >
             <img
-                src="@/assets/images/webp/promo2.webp"
+                :src="promo.image"
                 class="absolute top-0 left-0 w-full h-full object-cover"
                 alt=""
                 />
