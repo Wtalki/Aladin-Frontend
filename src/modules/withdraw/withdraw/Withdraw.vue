@@ -1,12 +1,12 @@
 <template>
     <section class="space-y-5 h-[120vh] overflow-y-scroll p-5">
         <h1 class="text-center text-lg text-primary font-semibold">{{ $t('withdraw') }}</h1>
-        <ul class="text-gold space-y-3">
+        <ul class="text-primary space-y-3">
             <li>{{ $t('select_withdraw_account') }}</li>
             <li>{{ $t('add_bank_accounts_instruction') }}</li>
         </ul>
         <Button type="link" route="/set-payment-accounts"
-            class="cursor-pointer !w-8 !h-8 rounded-full p-1 flex justify-center items-center bg-gold mx-auto">
+            class="cursor-pointer !w-8 !h-8 rounded-full p-1 flex justify-center items-center bg-primary mx-auto">
             <PlusIcon />
         </Button>
         <div v-if="isLoading">
@@ -42,7 +42,7 @@
                 class="p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:border-secondary outline-none"
                 :placeholder="$t('enter_login_password')" />
             <button :disabled="submitLoading" type="submit"
-                class="flex items-center justify-center w-full py-2 mt-4 font-semibold text-black transition-all rounded-lg bg-gold">
+                class="flex items-center justify-center w-full py-2 mt-4 font-semibold text-black transition-all rounded-lg bg-primary">
                 <div v-if="submitLoading" class="flex items-center justify-center">
                     <div>
                         <svg class="w-8 h-8 mr-2 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -61,7 +61,7 @@
             </button>
         </form>
         <h3 class="text-center font-semibold text-danger mt-5">
-            {{ $t('withdraw_issue') }} <router-link to="/service" class="text-gold underline">{{ $t('contact')
+            {{ $t('withdraw_issue') }} <router-link to="/service" class="text-primary underline">{{ $t('contact')
                 }}</router-link>
         </h3>
     </section>

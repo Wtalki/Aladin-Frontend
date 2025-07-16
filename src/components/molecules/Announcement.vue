@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex items-center justify-between pl-3 border rounded-md border-gold">
+    <nav class="flex items-center justify-between pl-3 border rounded-md border-primary">
         <img :src="require('@/assets/icons/announcement.webp')" alt="speaker" class="w-[20px]" />
         <div class="flex items-center px-3">
             <marquee :class="marqueeStyle" class="text-sm text-primary md:text-md" style="font-family: lato"
@@ -7,7 +7,7 @@
                 မြန်မာနိုင်ငံအနှံ့ကိုယ်စားလှယ်အလိုရှိသည်။အရေအတွက်ကန့်သတ်ထားပါသည်။စိတ်ဝင်စားသောမိတ်ဆွေများဖုန်းကိုဆက်သွယ်လိုက်ပါ။
                 09123456789</marquee>
         </div>
-        <div class="py-1 md:py-2 text-[13px] px-3 rounded-md bg-gold">
+        <div class="py-1 md:py-2 text-[13px] px-3 rounded-md bg-primary">
             ALADIN
         </div>
     </nav>

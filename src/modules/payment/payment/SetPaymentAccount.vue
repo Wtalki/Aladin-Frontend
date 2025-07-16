@@ -1,7 +1,7 @@
 <template>
     <section class="space-y-5 p-5 appWidth mx-auto bg-secondary h-[150vh]">
         <h1 class="text-center text-lg text-primary font-semibold">ဘဏ်အကောင့်သတ်မှတ်မည်</h1>
-        <ul class="font-semibold list-disc text-gold px-4">
+        <ul class="font-semibold list-disc text-primary px-4">
             <li>ငွေထုတ်မည့်ဘဏ်အကောင့်သတ်မှတ်ပါ။</li>
             <li>ဘဏ်တစ်ခုကိုအကောင့်တစ်ခုသာသတ်မှတ်နိုင်ပါသည်။</li>
             <li>သတ်မှတ်ထားသောဘဏ်အကောင့်များကိုပြောင်းလဲလိုပါကဝန်ဆောင်မှုဌာနသို့ဆက်သွယ်ပါ။</li>
@@ -25,7 +25,7 @@
                 class="p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:border-secondary outline-none"
                 placeholder="ငွေလက်ခံမည့်အကောင့်ကိုအတည်ပြုပါ" v-model="confirmBankAccNo" />
             <Button type="submit"
-                class="py-3 w-full px-4 text-center rounded-lg leading-5 text-primary bg-gold border border-secondary">အတည်ပြုသည်</Button>
+                class="py-3 w-full px-4 text-center rounded-lg leading-5 text-primary bg-primary border border-secondary">အတည်ပြုသည်</Button>
         </form>
     </section>
 </template>

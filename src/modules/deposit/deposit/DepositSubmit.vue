@@ -48,7 +48,7 @@
                 </div> -->
 
                 <button :disabled="submitLoading" type="submit"
-                    class="flex items-center justify-center w-full py-2 mt-4 font-semibold text-black transition-all rounded-lg bg-gold">
+                    class="flex items-center justify-center w-full py-2 mt-4 font-semibold text-black transition-all rounded-lg bg-primary">
                     <div v-if="submitLoading" class="flex items-center justify-center">
                         <svg class="w-8 h-8 mr-2 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24">
@@ -66,7 +66,7 @@
 
             <h3 class="text-center font-semibold text-danger">
                 {{ $t('payment_issue') }}
-                <router-link to="/service" class="text-gold underline">{{ $t('contact') }}</router-link>
+                <router-link to="/service" class="text-primary underline">{{ $t('contact') }}</router-link>
             </h3>
         </div>
     </section>
