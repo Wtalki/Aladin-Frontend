@@ -5,8 +5,8 @@
                     class="hover:bg-gray-200 border border-[#b6b6b6] p-2 rounded-2xl shadow-sm transition-all duration-200">
                     <img src="../../../assets/images/svg/leftarrow1.svg" width="25" alt="" />
                 </router-link>
-            </div>
-        <div class="w-full max-w mb-14 space-y-4">
+            </div> -->
+        <div class="w-full max-w-md mb-14 space-y-4">
             <div class="flex justify-center bg-light p-5"
                 style="border-bottom-left-radius: 40%; border-bottom-right-radius: 40%;">
                 <img :src="require('@/assets/icons/logo.png')" width="150" alt="Logo" />

@@ -1,4 +1,4 @@
-<template>
+s<template>
     <section class="flex flex-col w-full min-h-screen mx-auto rounded">
         <div class="flex items-center justify-between px-4 mt-4 font-bold text-primary">
             <div>{{ currentDate }}</div>
