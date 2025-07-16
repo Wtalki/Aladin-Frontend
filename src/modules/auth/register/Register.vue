@@ -11,11 +11,6 @@
                 style="border-bottom-left-radius: 40%; border-bottom-right-radius: 40%;">
                 <img :src="require('@/assets/icons/logo.png')" width="150" alt="Logo" />
             </div>
-        <div class="w-full max-w mb-14 space-y-4">
-            <div class="flex justify-center bg-light p-5"
-                style="border-bottom-left-radius: 40%; border-bottom-right-radius: 40%;">
-                <img :src="require('@/assets/icons/logo.png')" width="150" alt="Logo" />
-            </div>
 
             <h1 class="text-3xl font-bold text-gold text-center">{{ $t('register') }}</h1>
             <p class="text-light text-center">{{ $t('enter_personal_info') }}</p>
