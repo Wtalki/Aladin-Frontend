@@ -12,7 +12,7 @@
                 <span class="text-xs text-center line-clamp-1 w-20 !text-light">{{ $t('Wallet') }}</span>
             </Button>
             <Button type="link" route="/promo"
-                class="inline-flex flex-col items-center justify-center px-5 hover:bg-secondary group">
+                class="inline-flex flex-col items-center justify-center px-2 hover:bg-secondary group">
                 <svg fill="#ffffff" class="!w-5 !h-5 mb-2 !text-white" viewBox="0 0 32 32" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"/>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>

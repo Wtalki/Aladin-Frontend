@@ -15,12 +15,12 @@
                         <a v-if="contact.telegram" :href="contact.telegram" target="blank" class="transition-transform hover:scale-110">
                             <img src="@/assets/images/webp/telegram.webp" width="30" alt="Telegram" />
                         </a>
-                        <a v-if="contact.viber" :href="contact.viber" target="blank" class="transition-transform hover:scale-110">
+                        <!-- <a v-if="contact.viber" :href="contact.viber" target="blank" class="transition-transform hover:scale-110">
                             <img src="@/assets/images/svg/viber.svg" width="35" alt="Viber" />
                         </a>
                         <a v-if="contact.line" :href="contact.line" target="blank" class="transition-transform hover:scale-110">
                             <img src="@/assets/icons/line.png" width="30" alt="Line" />
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 

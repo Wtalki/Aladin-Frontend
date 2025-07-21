@@ -1,9 +1,9 @@
 <template>
     <section class="flex flex-col items-center p-5 min-h-screen">
-        <div class="bg-gold text-light p-3 rounded-lg w-full text-center flex justify-between items-center">
+        <div class=" bg-danger text-light p-3 rounded-lg w-full text-center flex justify-between items-center">
             <span>
                 {{ $t('rul') }}
-                <router-link to="/twod/twod-rules" class="underline">{{ $t('read') }}</router-link>
+                <router-link to="/twod/twod-rules" class="underline text-primary">{{ $t('read') }}</router-link>
             </span>
         </div>
 
@@ -14,15 +14,15 @@
             </router-link> -->
             <router-link to="/twod/winners" class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="!w-12" :src="require('@/assets/images/svg/winner.svg')" />
-                <span class="mt-2">{{ $t('winners') }}</span>
+                <span class="mt-2 text-[12px]">{{ $t('winners') }}</span>
             </router-link>
             <router-link to="/twod/history" class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="!w-12" :src="require('@/assets/images/webp/history.webp')" />
-                <span class="mt-2">{{ $t('history') }}</span>
+                <span class="mt-2 text-[12px]">{{ $t('history') }}</span>
             </router-link>
             <router-link to="/twod/holidays" class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="!w-12" :src="require('@/assets/images/webp/holiday.webp')" />
-                <span class="mt-2">{{ $t('holiday') }}</span>
+                <span class="mt-2 text-[12px]">{{ $t('holiday') }}</span>
             </router-link>
         </section>
 
@@ -69,7 +69,7 @@
         </section>
 
         <router-link to="/twod/bet-select-time"
-            class="fixed bottom-28 py-2 px-3 text-center bg-gold rounded-lg shadow-md"> {{ $t('2D_Bet') }}
+            class="fixed bottom-28 py-2 px-3 text-center bg-danger text-light rounded-lg shadow-md"> {{ $t('2D_Bet') }}
         </router-link>
     </section>
 </template>

@@ -1,9 +1,9 @@
 <template>
     <section class="flex flex-col items-center p-5 min-h-screen">
-        <div class="bg-gold text-light p-2 mb-2 rounded-lg w-full flex justify-center items-center">
+        <div class="bg-danger  text-light p-2 mb-2 rounded-lg w-full flex justify-center items-center">
             3D ထွက်မည့်ရက် : {{ threedSetting?.result_date }}
         </div>
-        <div class="bg-gold text-light p-3 rounded-lg w-full text-center flex justify-between items-center">
+        <div class="bg-danger  text-light p-3 rounded-lg w-full text-center flex justify-between items-center">
             <span>
                 {{ $t('rul') }}
                 <router-link to="/threed/threed-rules" class="underline">{{ $t('read') }}</router-link>
@@ -14,15 +14,15 @@
             <router-link to="/threed/dreams-number"
                 class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="w-14" :src="require('@/assets/images/webp/night.png')" />
-                <span class="mt-2">{{ $t('dream_numbers') }}</span>
+                <span class="mt-2 text-[12px]">{{ $t('dream_numbers') }}</span>
             </router-link>
             <router-link to="/threed/winners" class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="w-14" :src="require('@/assets/images/svg/winner.svg')" />
-                <span class="mt-2">{{ $t('winners') }}</span>
+                <span class="mt-2 text-[12px]">{{ $t('winners') }}</span>
             </router-link>
             <router-link to="/threed/history" class="flex flex-col items-center text-primary font-semibold text-md">
                 <img class="w-14" :src="require('@/assets/images/webp/history.webp')" />
-                <span class="mt-2">{{ $t('history') }}</span>
+                <span class="mt-2 text-[12px]">{{ $t('history') }}</span>
             </router-link>
         </section>
 
@@ -53,7 +53,7 @@
         <div class="fixed bottom-28" v-if="token">
             <div v-if="!loading">
                 <router-link v-if="threedSetting?.status" to="/threed/bet"
-                    class="py-2 px-3 text-center bg-gold rounded-lg shadow-md"> {{
+                    class="py-2 px-3 text-center bg-danger text-light rounded-lg shadow-md"> {{
                         $t('3D_Bet') }} </router-link>
                 <div v-else class="py-2 px-3 text-center bg-danger text-light rounded-lg shadow-md"> {{
                     $t('3D_closed') }} </div>

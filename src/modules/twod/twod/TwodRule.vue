@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center min-h-screen">
-        <div class="w-full max-w-3xl rounded-lg shadow-lg p-3">
-            <h1 class="text-gold text-center text-2xl font-semibold">စည်းကမ်းချက်များ</h1>
+        <div class="w-full max-w-3xl rounded-lg shadow-lg p-3 mb-6">
+            <h1 class="text-danger text-center text-2xl font-semibold">စည်းကမ်းချက်များ</h1>
 
             <div v-for="(item, index) in accordionItems" :key="index">
                 <div class="border border-gray-700 p-3 mx-2 mt-3 rounded-lg transition-all duration-300 cursor-pointer flex justify-between items-center bg-secondary hover:!bg-primary"
@@ -15,7 +15,7 @@
                     <div v-if="activeIndex === index"
                         class="border border-gray-700 p-4 mx-2 rounded-lg mt-2 bg-primary">
                         <div v-for="(section, secIndex) in item.content" :key="secIndex" class="mb-4">
-                            <h6 class="text-gold font-semibold">{{ section.title }}</h6>
+                            <h6 class="text-danger font-semibold">{{ section.title }}</h6>
                             <ul class="list-disc ml-5 space-y-2 text-light">
                                 <li v-for="(point, pIndex) in section.points" :key="pIndex">{{ point }}</li>
                             </ul>
