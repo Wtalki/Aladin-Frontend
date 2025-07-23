@@ -2,24 +2,24 @@
   <div class="p-2 grid grid-cols-2 gap-2">
     <div v-for="(category, n) in categoryLists" :key="n">
       <router-link to="/twod" v-if="category.category_name == '2D'"
-        class="bg-primary text-light rounded-lg p-2 flex justify-between items-center cursor-pointer">
+        class="bg-primary text-light rounded-lg py-2 px-1 flex justify-between items-center cursor-pointer">
           <div>
           <h2 class="font-semibold tracking-wider text-md text-white">2D</h2>
           <p class="text-[10px] text-gray-200">{{ formattedMoney }} </p>
         </div>
-        <img :src="category.image" class="w-14 h-14 object-cover" />
+        <img :src="category.image" class="w-14 h-10 object-cover" />
       </router-link>
 
       <router-link to="/threed" v-else-if="category.category_name == '3D'"
-        class="bg-primary text-light rounded-lg p-2 flex justify-between items-center cursor-pointer">
+        class="bg-primary text-light rounded-lg py-2 px-1 flex justify-between items-center cursor-pointer">
         <div>
           <h2 class="font-semibold tracking-wider text-md text-white">3D</h2>
           <p class="text-[10px] text-gray-200">{{ formattedMoney }}</p>
         </div>
-        <img :src="category.image" class="w-14 h-14 object-cover" />
+        <img :src="category.image" class="w-14 h-10 object-cover" />
       </router-link>
 
-      <div v-else class=" bg-primary text-light rounded-lg p-2 flex justify-between items-center cursor-pointer"
+      <div v-else class=" bg-primary text-light rounded-lg py-2 px-1 flex justify-between items-center cursor-pointer"
         @click="showGame(category.category_name)">
         <div>
           <h2 class="font-semibold tracking-wider text-[12px] text-white" v-if="category.category_name =='POPULAR'">Popular</h2>
@@ -28,11 +28,11 @@
           <h2 class="font-semibold tracking-wider text-[12px] text-white" v-if="category.category_name =='LIVE_CASINO'">Live Casino</h2>
           <h2 class="font-semibold tracking-wider text-[12px] text-white" v-if="category.category_name =='LIVE_CASINO_PREMIUM'">PRE Live Casino</h2>
           <h2 class="font-semibold tracking-wider text-[12px] text-white" v-if="category.category_name =='POKER'">Poker</h2>
-          <h2 class="font-semibold tracking-wider text-[12px] text-white" v-if="category.category_name =='SPORT_BOOK'">Sport Book</h2>
+          <h2 class="font-semibold tracking-wider text-[12px] text-white" v-if="category.category_name =='SPORT_BOOK'">Sports</h2>
           <h2 class="font-semibold tracking-wider text-[12px] text-white" v-if="category.category_name =='VIRTUAL_SPORT'">Virtual Sport</h2>
           <p class="text-[10px] text-gray-200">{{ category.randomMoney.toLocaleString() }} Users</p>
         </div>
-        <img :src="category.image" class="w-14 h-14 object-cover" />
+        <img :src="category.image" class="w-14 h-10 object-cover" />
       </div>
     </div>
   </div>

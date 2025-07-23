@@ -43,12 +43,12 @@
 
                     <div class="flex  sm:flex-row gap-3 w-full">
                         <div class="flex-1 flex items-center gap-3 px-4 py-2 bg-primary border border-primary rounded-2xl shadow hover:shadow-lg transition-all duration-200">
-                        <img src="@/assets/images/svg/tiktok.svg" width="30" alt="TikTok" />
+                        <img src="@/assets/images/webp/tiktok.webp" width="30" alt="TikTok" />
                         <a href="https://www.youtube.com/@LottoMM2D" target="_blank" class="text-sm font-medium text-white">TikTok</a>
                         </div>
                         <div class="flex-1 flex items-center gap-3 px-4 py-2 bg-primary border border-primary rounded-2xl shadow hover:shadow-lg transition-all duration-200">
                         <img src="@/assets/images/webp/telegram.webp" width="30" alt="Telegram" />
-                        <a href="https://t.me/aladinofficalchannel" target="_blank" class="text-sm font-medium text-white">Telegram Channel</a>
+                        <a href="https://t.me/aladinofficalchannel" target="_blank" class="text-sm font-medium text-white">Telegram</a>
                         </div>
                     </div>
                     </div>
