@@ -17,15 +17,54 @@
             </div>
         </div>
         <div v-if="user" class="p-2 rounded-lg bg-secondary text-light flex items-center space-x-2">
-                <div>{{ user.region == 'my' ? $t('MMK') : $t('THB') }} {{ user.wallet }}</div>
-                <router-link to="/deposit">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-current !h-6 !w-6 text-light cursor-pointer"
-                        viewBox="0 0 448 512">
-                        <path
-                            d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM200 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
-                    </svg>
-                </router-link>
-            </div>
+    <div>
+        <!-- Toggle display between actual wallet and hidden mask -->
+        {{ user.region == 'my' ? $t('MMK') : $t('THB') }}
+        {{ showWallet ? user.wallet : '•••••' }}
+    </div>
+    <div @click.stop.prevent="toggleWallet">
+    <svg
+      v-if="showWallet"
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-6 h-6 text-light cursor-pointer"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+      />
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+      />
+    </svg>
+    <svg
+      v-else
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-6 h-6 text-light cursor-pointer"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a9.956 9.956 0 012.642-4.243M9.88 9.88a3 3 0 104.243 4.243"
+      />
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 3l18 18"
+      />
+    </svg>
+  </div>
+</div>
     </section>
 </template>
 
@@ -38,6 +77,16 @@ export default {
         Button,
      
     },
-    computed: mapGetters(['user', 'token'])
+    computed: mapGetters(['user', 'token']),
+    data() {
+    return {
+      showWallet: false
+    }
+  },
+  methods: {
+    toggleWallet() {
+      this.showWallet = !this.showWallet
+    }
+  }
 }
 </script>
