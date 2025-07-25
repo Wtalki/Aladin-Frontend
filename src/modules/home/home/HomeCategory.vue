@@ -7,29 +7,24 @@
             <img :src="platform.image" :alt="platform.product_name" class="h-8 object-contain" />
         </div>
     </div>
-     <div class="">
-            <div ref="scrollContainer" class="overflow-x-auto">
-                <div class="flex flex-wrap flex-col gap-3 content-start" style="height: 450px; min-width: max-content">
-                <div
-  v-for="game in gameLists"
-  :key="game.id"
-  @click="playGame(game)"
-  class="p-[2px] rounded-md bgGradient shadow-md cursor-pointer transition-transform hover:scale-105"
->
-  <div class="w-28 h-32 rounded-md bg-white overflow-hidden">
-    <img :src="game.image" :alt="game.game_name" class="w-full h-24 object-cover" />
-    <div class="p-2 text-center">
-      <h2 class="text-sm font-semibold text-primary truncate">
-        {{ game.game_name }}
-      </h2>
-    </div>
-  </div>
-</div>
+    <div class="">
+        <div ref="scrollContainer" class="overflow-x-auto">
+            <div class="flex flex-wrap flex-col gap-3 content-start" style="height: 450px; min-width: max-content">
+                <div v-for="game in gameLists" :key="game.id" @click="playGame(game)" class="p-[2px] rounded-md bgGradient shadow-md cursor-pointer transition-transform hover:scale-105">
+                    <div class="w-28 h-32 rounded-md bg-white overflow-hidden">
+                        <img :src="game.image" :alt="game.game_name" class="w-full h-24 object-cover" />
+                        <div class="p-2 text-center">
+                            <h2 class="text-sm font-semibold text-primary truncate">
+                                {{ game.game_name }}
+                            </h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    <div class="px-2 grid grid-cols-2 gap-2">
-        <div v-for="(category, n) in categoryFilterLists" :key="n">
+    </div>
+    <div class="px-2 grid grid-cols-2 gap-2 ">
+        <div v-for="(category, n) in categoryFilterLists" :key="n" class=" rounded-lg">
             <router-link to="/twod" v-if="category.category_name == '2D'" class="bg-primary text-light rounded-lg py-2 px-1 flex justify-between items-center cursor-pointer">
                 <div>
                     <h2 class="font-semibold tracking-wider text-md text-white">2D</h2>
@@ -71,9 +66,9 @@ import debounce from 'lodash/debounce'
 import GameModal from '@/components/gameIframe/GameIframe.vue'
 
 export default {
-   components: {
-    GameModal
-  },
+    components: {
+        GameModal
+    },
     data() {
         return {
             categoryLists: [],
@@ -91,7 +86,7 @@ export default {
             searchQuery: '',
             showIframe: false,
             iframeUrl: '',
-            categoryName: 'POPULAR', // Added to track selected category
+            categoryName: 'POPULAR' // Added to track selected category
         }
     },
     computed: {
@@ -196,7 +191,7 @@ export default {
 
         // ✅ Fixed platformGame method
         platformGame(productName) {
-          console.log(productName)
+            console.log(productName)
             this.categoryName = productName
             this.page = 1
             this.hasMore = true
@@ -269,8 +264,7 @@ export default {
     flex-shrink: 0;
     margin-right: 10px;
 }
-.bgGradient{
-  background: linear-gradient(90deg, rgba(253, 248, 128, 1) 0%, rgba(101, 59, 17, 1) 19%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 62%, rgba(250, 225, 140, 1) 80%, rgba(213, 179, 99, 1) 100%);
+.bgGradient {
+    background: linear-gradient(90deg, rgba(253, 248, 128, 1) 0%, rgba(101, 59, 17, 1) 19%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 62%, rgba(250, 225, 140, 1) 80%, rgba(213, 179, 99, 1) 100%);
 }
 </style>
-

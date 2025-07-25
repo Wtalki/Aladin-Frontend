@@ -13,13 +13,14 @@
         </div>
 
         <div class="grid grid-cols-3 gap-3 pb-20">
-            <div v-for="game in gameLists" :key="game.id" @click="playGame(game)"
-                class="rounded-md shadow-md overflow-hidden cursor-pointer transition-transform hover:scale-105">
-                <img :src="game.image" :alt="game.game_name" class="w-full h-32 object-cover" />
-                <div class="p-2 text-center">
-                    <h2 class="text-sm font-semibold text-primary truncate">
-                        {{ game.game_name }}
-                    </h2>
+             <div v-for="game in gameLists" :key="game.id" @click="playGame(game)"  class=" w-full p-[2px] rounded-md bgGradient shadow-md cursor-pointer transition-transform hover:scale-105">
+                <div class="h-32 rounded-md bg-white overflow-hidden">
+                    <img :src="game.image" :alt="game.game_name" class="w-full h-24 object-cover" />
+                    <div class="p-2 text-center">
+                        <h2 class="text-sm font-semibold text-primary truncate">
+                            {{ game.game_name }}
+                        </h2>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,3 +145,8 @@ export default {
     }
 }
 </script>
+<style scoped>
+.bgGradient {
+    background: linear-gradient(90deg, rgba(253, 248, 128, 1) 0%, rgba(101, 59, 17, 1) 19%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 62%, rgba(250, 225, 140, 1) 80%, rgba(213, 179, 99, 1) 100%);
+}
+</style>
