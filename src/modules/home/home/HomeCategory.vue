@@ -23,7 +23,7 @@
             </div>
         </div>
     </div>
-    <div class="px-2 grid grid-cols-2 gap-2 ">
+    <div class="px-2 grid grid-cols-2 gap-2 mb-8">
         <div v-for="(category, n) in categoryFilterLists" :key="n" class=" rounded-lg">
             <router-link to="/twod" v-if="category.category_name == '2D'" class="bg-primary text-light rounded-lg py-2 px-1 flex justify-between items-center cursor-pointer">
                 <div>
