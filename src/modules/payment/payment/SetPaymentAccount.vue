@@ -1,5 +1,5 @@
 <template>
-    <section class="space-y-5 p-5 appWidth mx-auto bg-secondary h-[150vh]">
+    <section class="space-y-5 p-5 appWidth mx-auto bg-secondary h-[180vh]">
         <h1 class="text-center text-lg text-primary font-semibold">ဘဏ်အကောင့်သတ်မှတ်မည်</h1>
         <ul class="font-semibold list-disc text-primary px-4">
             <li>ငွေထုတ်မည့်ဘဏ်အကောင့်သတ်မှတ်ပါ။</li>

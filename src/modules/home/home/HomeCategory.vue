@@ -1,18 +1,20 @@
 <template>
-    <div class="overflow-x-auto whitespace-nowrap p-1 bg-gray-50 rounded flex space-x-2 scroll-smooth">
-        <div v-for="(category, index) in popularCategories" :key="'cat-' + index" @click="platformGame(category.category_name)" class="text-white bg-primary rounded min-w-[100px] flex justify-center items-center">
+    <div class="overflow-x-auto whitespace-nowrap p-1 rounded flex space-x-2 scroll-smooth">
+        <div v-for="(category, index) in popularCategories" :key="'cat-' + index" @click="platformGame(category.category_name)" class="text-white bg-transparent rounded min-w-[100px] flex justify-center items-center">
             <img :src="category.image" :alt="category.product_name" class="h-8 object-contain" />
         </div>
-        <div v-for="(platform, index) in platformLists" :key="'plat-' + index" @click="platformGame(platform.product_name)" class="text-white bg-primary rounded min-w-[100px] flex justify-center items-center">
+        <div v-for="(platform, index) in platformLists" :key="'plat-' + index" @click="platformGame(platform.product_name)" class="text-white bg-transparent rounded min-w-[100px] flex justify-center items-center">
             <img :src="platform.image" :alt="platform.product_name" class="h-8 object-contain" />
         </div>
     </div>
     <div class="">
         <div ref="scrollContainer" class="overflow-x-auto">
-            <div class="flex flex-wrap flex-col gap-3 content-start" style="height: 450px; min-width: max-content">
+            <div class="flex flex-wrap flex-col gap-3 content-start" style="height: 500px; min-width: max-content">
                 <div v-for="game in gameLists" :key="game.id" @click="playGame(game)" class="p-[2px] rounded-md bgGradient shadow-md cursor-pointer transition-transform hover:scale-105">
-                    <div class="w-28 h-32 rounded-md bg-white overflow-hidden">
-                        <img :src="game.image" :alt="game.game_name" class="w-full h-24 object-cover" />
+                    <div class="w-28 h-36 rounded-md bg-white overflow-hidden">
+                        <div class="relative w-full aspect-square">
+                            <img :src="game.image" :alt="game.game_name" class="absolute inset-0 w-full h-full object-cover rounded" />
+                        </div>
                         <div class="p-2 text-center">
                             <h2 class="text-sm font-semibold text-primary truncate">
                                 {{ game.game_name }}
