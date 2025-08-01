@@ -1,12 +1,17 @@
 <template>
-    <div class="overflow-x-auto whitespace-nowrap p-1 rounded flex space-x-2 scroll-smooth">
-        <div v-for="(category, index) in popularCategories" :key="'cat-' + index" @click="platformGame(category.category_name)" class="text-white bg-transparent rounded min-w-[100px] flex justify-center items-center">
-            <img :src="category.image" :alt="category.product_name" class="h-8 object-contain" />
-        </div>
-        <div v-for="(platform, index) in platformLists" :key="'plat-' + index" @click="platformGame(platform.product_name)" class="text-white bg-transparent rounded min-w-[100px] flex justify-center items-center">
-            <img :src="platform.image" :alt="platform.product_name" class="h-8 object-contain" />
-        </div>
-    </div>
+    <Swiper :slides-per-view="4" :space-between="10" :autoplay="{ delay: 500, disableOnInteraction: false }" :loop="true" class="px-2 py-1">
+        <SwiperSlide v-for="(category, index) in popularCategories" :key="'cat-' + index" @click="platformGame(category.category_name)" class="!w-auto cursor-pointer">
+            <div class="text-white bg-transparent rounded min-w-[100px] flex justify-center items-center">
+                <img :src="category.image" :alt="category.product_name" class="h-8 object-contain" />
+            </div>
+        </SwiperSlide>
+
+        <SwiperSlide v-for="(platform, index) in platformLists" :key="'plat-' + index" @click="platformGame(platform.product_name)" class="!w-auto cursor-pointer">
+            <div class="text-white bg-transparent rounded min-w-[100px] flex justify-center items-center">
+                <img :src="platform.image" :alt="platform.product_name" class="h-8 object-contain" />
+            </div>
+        </SwiperSlide>
+    </Swiper>
     <div class="">
         <div ref="scrollContainer" class="overflow-x-auto">
             <div class="flex flex-wrap flex-col gap-3 content-start" style="height: 500px; min-width: max-content">
@@ -26,7 +31,7 @@
         </div>
     </div>
     <div class="px-2 grid grid-cols-2 gap-2 mb-8">
-        <div v-for="(category, n) in categoryFilterLists" :key="n" class=" rounded-lg">
+        <div v-for="(category, n) in categoryFilterLists" :key="n" class="rounded-lg">
             <router-link to="/twod" v-if="category.category_name == '2D'" class="bg-primary text-light rounded-lg py-2 px-1 flex justify-between items-center cursor-pointer">
                 <div>
                     <h2 class="font-semibold tracking-wider text-md text-white">2D</h2>
@@ -66,10 +71,19 @@
 import { mapGetters } from 'vuex'
 import debounce from 'lodash/debounce'
 import GameModal from '@/components/gameIframe/GameIframe.vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import SwiperCore from 'swiper'
+import { Autoplay } from 'swiper/modules'
+
+SwiperCore.use([Autoplay])
 
 export default {
     components: {
-        GameModal
+        GameModal,
+        Swiper,
+        SwiperSlide
     },
     data() {
         return {
@@ -268,5 +282,12 @@ export default {
 }
 .bgGradient {
     background: linear-gradient(90deg, rgba(253, 248, 128, 1) 0%, rgba(101, 59, 17, 1) 19%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 62%, rgba(250, 225, 140, 1) 80%, rgba(213, 179, 99, 1) 100%);
+}
+.swiper {
+    width: 100%;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
 }
 </style>
