@@ -136,6 +136,7 @@ export default {
             }
         },
 
+
         closeIframe() {
             if(this.categoryName != 'SPORT_BOOK'){
                 this.showIframe = false
