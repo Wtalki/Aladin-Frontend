@@ -60,9 +60,13 @@ export default {
 
         getRouteData() {
             this.categoryName = this.$route.params.categoryName
+            if(this.categoryName == 'SPORT_BOOK'){
+              this.playGame()
+            }
         },
         async fetchGames(customPage = null) {
             if (this.loading || !this.hasMore) return
+            if (this.categoryName == 'SPORT_BOOK') return
             this.loading = true
 
             const pageToFetch = customPage ?? this.page
@@ -100,31 +104,46 @@ export default {
         },
         async playGame(game) {
             if (!this.token) {
+                this.$router.push({ name: 'login' });
                 console.log('Not logged in')
                 return
             }
             this.showIframe = true
-            console.log(this.showIframe)
 
-            const params = {
-                game_code: game.game_code,
-                game_type: game.game_type,
-                product_code: game.product_id,
-                member_account: this.user.phone
+           let params;
+
+            if (this.categoryName != 'SPORT_BOOK') {
+                params = {
+                    game_code: game.game_code,
+                    game_type: game.game_type,
+                    product_code: game.product_id,
+                    member_account: this.user.phone
+                };
+            } else {
+                params = {
+                    game_code: '',
+                    game_type: 'SPORT_BOOK',
+                    product_code: '1183',
+                    member_account: this.user.phone
+                };
             }
 
             try {
                 const res = await this.$axios.post('/get/callback/key', params)
                 this.iframeUrl = res.data.url
-                console.log(res);
             } catch (err) {
                 console.error('Launch game error', err)
             }
         },
 
         closeIframe() {
-            this.showIframe = false
-            this.iframeUrl = ''
+            if(this.categoryName != 'SPORT_BOOK'){
+                this.showIframe = false
+                this.iframeUrl = ''
+            }else{
+                this.$router.push({ name: 'home' });
+                
+            }
         }
     },
     mounted() {
